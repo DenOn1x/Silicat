@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Главная"
+})
+<body>
+@@include('html/header.html',{})
+<main class="page">
+    <section class="about-company" id="about-cmp">
+        <div class="about-company__wrapper">
+            <div class="about-company__container _container">
+                <div class="about-company__body">
+                    <a href="#" class="about-company__logo logo-page">
+                        <img src="@img/logo.svg" alt="logo-page" class="logo-page__image">
+                    </a>
+                    <div class="menu-btn menu-btn-page">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="menu block-menu">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Главная</a></li>
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="about-company__number number-page">
+                        <a href="tel:+375222777700" class="number-page__link">
+                            <img class="number-page__image" src="@img/phone-number-black.svg" alt="phone-number">
+                        </a>
+                    </div>
+                </div>
+                <div class="about-company__block block-page">
+                    <div class="block-page__title">
+                        О компании
+                    </div>
+                    <div class="block-page__group-text text-group">
+                    <span class="text-group__sub-title">
+                        Группа компаний
+                    </span>
+                        <span class="text-group__sub-text">
+                        «Газосиликат» производит блоки из ячеистого бетона.
+                        Песок для производства добывается из собственного песчаного карьера.
+                    </span>
+                    </div>
+                    <div class="block-page__text">
+                        Наша продукция
+                        прошла многочисленные испытания и неоднократно
+                        было подтверждено ее высокое качество.
+                    </div>
+                    <div class="block-page__button button-more">
+                        <button class="button-more__btn">
+                            подробнее
+                        </button>
+                    </div>
+                    <div class="block-page__image factory-img">
+                        <img src="@img/factory-img.png" alt="factory-image" class="factory-img__image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+@@include('html/footer.html',{})
+<script src="js/app.min.js"></script>
+</body>
+</html>
