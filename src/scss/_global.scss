@@ -3,9 +3,13 @@
 
   .about-company {
     &__wrapper {
+      position: relative;
+      z-index: 1;
       margin: 6px;
       background: #FFFFFF;
       border-radius: 8px;
+      height: 780px;
+
     }
 
     &__body {
@@ -13,33 +17,6 @@
       flex-direction: row;
     }
 
-    .logo-page {
-      &__image {
-        margin: 26px 20px 0 0;
-
-      }
-    }
-
-    .number-page {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      padding: 14px 24px;
-      gap: 10px;
-      width: 72px;
-      height: 52px;
-      border: 2px solid #FFBB33;
-      border-radius: 28px;
-      margin: 26px 0 0 12px;
-
-      &__link {
-
-      }
-
-      &__image {
-
-      }
-    }
 
     .block-page {
       &__title {
@@ -49,7 +26,7 @@
         font-size: 32px;
         line-height: 44px;
         color: #000000;
-        margin: 22px 0;
+        margin: 24px 0;
       }
 
       .text-group {
@@ -64,14 +41,6 @@
         flex-direction: column;
         max-width: 260px;
         margin-bottom: 24px;
-
-        &__sub-title {
-
-        }
-
-        &__sub-text {
-
-        }
       }
 
       &__text {
@@ -81,17 +50,18 @@
         font-size: 16px;
         line-height: 24px;
         color: #000000;
+        margin: 24px 0;
       }
 
       .button-more {
-        width: 266px;
+        width: 272px;
         height: 56px;
         background: #FFBB33;
         border-radius: 28px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 20px 0 30px 0;
+        margin-bottom: 140px;
 
         &__btn {
           font-family: "Inter";
@@ -109,83 +79,373 @@
 
       .factory-img {
         &__image {
+          position: absolute;
+          bottom: 0;
+          right: 0;
           object-position: right;
           object-fit: cover;
+          z-index: -1;
         }
       }
+
+      .arrow-about {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 24px;
+        gap: 10px;
+        width: 72px;
+        height: 52px;
+        background: #FFBB33;
+        border-radius: 28px;
+        margin: auto;
+      }
+    }
+
+    .menu-btn-page {
+      border: 2px solid #FFBB33;
+
+      span {
+        background-color: #000000FF;
+      }
+    }
+
+    .number-page {
+      border: 2px solid #FFBB33;
+    }
+
+  }
+
+  .products-block {
+    &__wrapper {
+      margin: 6px;
+      background: #FFFFFF;
+      border-radius: 8px;
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .menu-btn-page {
+      border: 2px solid #FFBB33;
+
+      span {
+        background-color: #000000FF;
+      }
+    }
+
+    .number-page {
+      border: 2px solid #FFBB33;
     }
   }
+
+
+  .wind-warm-block {
+    position: relative;
+
+    &__wrapper {
+      margin: 6px;
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .box-wind {
+      .title-block {
+        display: flex;
+        flex-direction: column;
+        margin: 24px 0;
+
+        &__title, &__sub-title {
+          font-family: "Mulish";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 32px;
+          line-height: 44px;
+          color: #FFFFFF;
+        }
+      }
+
+      &__sub-title {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+      }
+
+      &__text {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        width: 284px;
+        margin: 24px 0;
+      }
+
+      .button-about {
+        width: 272px;
+        height: 56px;
+        background: #FFBB33;
+        border-radius: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 80px;
+
+        &__btn {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 28px;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: #000000;
+          border: none;
+          background: none;
+        }
+      }
+
+      .arrow-wind {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 24px;
+        gap: 10px;
+        width: 72px;
+        height: 52px;
+        background: #FFBB33;
+        border-radius: 28px;
+        margin: auto;
+      }
+
+    }
+
+    &__mobile-bg {
+      position: absolute;
+      top: 0;
+      width: 96%;
+      height: 784px;
+      object-fit: cover;
+      object-position: center;
+      z-index: -999;
+      border-radius: 8px;
+    }
+
+  }
+
+  .transport-company-block {
+    position: relative;
+    margin-top: 32px;
+
+    &__wrapper {
+      margin: 6px;
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .box-transport {
+
+      &__title-block {
+        font-family: "Mulish";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 44px;
+        color: #FFFFFF;
+        margin: 24px 0;
+      }
+
+      &__sub-title {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        margin: 24px 0;
+      }
+
+      &__text {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        max-width: 246px;
+        margin: 24px 0;
+
+      }
+    }
+
+    .button-about {
+      width: 272px;
+      height: 56px;
+      background: #FFBB33;
+      border-radius: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 60px;
+
+      &__btn {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #000000;
+        border: none;
+        background: none;
+      }
+    }
+
+    .arrow-transport {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      gap: 10px;
+      width: 72px;
+      height: 52px;
+      background: #FFBB33;
+      border-radius: 28px;
+      margin: auto;
+    }
+
+    &__mobile-bg {
+      position: absolute;
+      top: 0;
+      width: 96%;
+      height: 784px;
+      object-fit: cover;
+      object-position: center;
+      z-index: -999;
+      border-radius: 8px;
+    }
+
+  }
+
+  .medical-center-block {
+    position: relative;
+    margin-top: 32px;
+
+    &__wrapper {
+      margin: 6px;
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .box-medical {
+
+      &__title-block {
+        font-family: "Mulish";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 44px;
+        color: #FFFFFF;
+        margin: 24px 0;
+      }
+
+      &__sub-title {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        margin: 24px 0;
+      }
+
+      &__text {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        margin: 24px 0;
+
+      }
+    }
+
+    .button-about {
+      width: 272px;
+      height: 56px;
+      background: #FFBB33;
+      border-radius: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 90px;
+
+      &__btn {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #000000;
+        border: none;
+        background: none;
+      }
+    }
+
+    .arrow-medical {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      gap: 10px;
+      width: 72px;
+      height: 52px;
+      background: #FFBB33;
+      border-radius: 28px;
+      margin: auto;
+    }
+
+    &__mobile-bg {
+      position: absolute;
+      top: 0;
+      width: 96%;
+      height: 784px;
+      object-fit: cover;
+      object-position: center;
+      z-index: -999;
+      border-radius: 8px;
+    }
+
+  }
+
+
 }
 
 
-.menu-btn-page {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 14px 24px;
-  gap: 10px;
-  margin-top: 26px;
-  border: 2px solid #FFBB33;
-  border-radius: 28px;
-  width: 72px;
-  height: 52px;
-  position: relative;
-  z-index: 999;
-  overflow: hidden;
-}
 
-.menu-btn-page span {
-  width: 20px;
-  height: 2px;
-  position: absolute;
-  z-index: 999;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #000000FF;
-  transition: all 0.5s;
-}
-
-.menu-btn-page span:nth-of-type(2) {
-  width: 12px;
-  top: calc(50% - 5px);
-}
-
-.menu-btn-page span:nth-of-type(3) {
-  width: 12px;
-  top: calc(50% + 5px);
-}
-
-.block-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  background: #FFEFBA;
-  transform: translateX(-100%);
-  transition: transform 0.5s;
-}
-
-.block-menu.active {
-  transform: translateX(0);
-}
-
-.block-menu li {
-  list-style-type: none;
-}
-
-.menu-btn-page.active span:nth-of-type(1) {
-  display: none;
-}
-
-.menu-btn-page.active span:nth-of-type(2) {
-  top: 50%;
-  transform: translate(-50%, 0%) rotate(45deg);
-}
-
-.menu-btn-page.active span:nth-of-type(3) {
-  top: 50%;
-  transform: translate(-50%, 0%) rotate(-45deg);
-}

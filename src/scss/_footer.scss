@@ -1,3 +1,130 @@
-footer{
+.footer {
   flex: 0 0 auto;
+  margin-top: 34px;
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__wrapper-layout {
+    background: #292929;
+    border-radius: 8px;
+    margin: 6px;
+    height: auto;
+  }
+
+  .top-footer {
+    &__body {
+
+    }
+
+    &__title {
+      font-family: "Mulish";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 44px;
+      color: #FFFFFF;
+      margin: 24px 0;
+    }
+
+    .contacts-block {
+      &__title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+      }
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+        padding-left: 24px;
+      }
+
+      &__item {
+        list-style-type: disc;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+      }
+
+      &__link {
+        color: inherit;
+      }
+
+      .mail-contacts {
+        font-family: 'Inter';
+        font-style: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+
+        &__title {
+          margin: 24px 0 12px 0;
+          font-weight: 500;
+          letter-spacing: 0.02em;
+
+        }
+
+        &__link {
+          color: inherit;
+          font-weight: 400;
+          text-decoration: underline;
+
+        }
+      }
+
+      .address-contacts {
+        font-family: 'Inter';
+        font-style: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+
+        &__title {
+          margin: 24px 0 12px 0;
+          font-weight: 500;
+          letter-spacing: 0.02em;
+
+        }
+
+        &__street {
+          font-weight: 400;
+          min-width: 270px;
+        }
+      }
+    }
+    .button-write {
+      width: 272px;
+      height: 56px;
+      background: #FFBB33;
+      border-radius: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 24px;
+
+      &__btn {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #000000;
+        border: none;
+        background: none;
+      }
+    }
+  }
+
 }

@@ -26,6 +26,10 @@ ol, ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 blockquote, q {
   quotes: none;
 }
@@ -45,6 +49,48 @@ input {
   border-radius: 0;
 }
 
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-ExtraBold.woff2") format("woff2"), url("../fonts/Inter-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Mulish;
+  font-display: swap;
+  src: url("../fonts/Mulish-Black.woff2") format("woff2"), url("../fonts/Mulish-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
 .header {
   flex: 0 0 auto;
   position: relative;
@@ -97,7 +143,7 @@ input {
   font-family: "Mulish";
   font-style: normal;
   font-weight: 900;
-  font-size: 28px;
+  font-size: 26px;
   line-height: 40px;
   color: #FFFFFF;
 }
@@ -105,7 +151,7 @@ input {
   font-family: "Mulish";
   font-style: normal;
   font-weight: 900;
-  font-size: 48px;
+  font-size: 44px;
   line-height: 60px;
   color: #FFFFFF;
 }
@@ -125,7 +171,7 @@ input {
   line-height: 40px;
   text-align: center;
   color: #FFFFFF;
-  margin-bottom: 80px;
+  margin-bottom: 90px;
 }
 .header .arrow-header {
   display: flex;
@@ -140,7 +186,7 @@ input {
   border-radius: 28px;
   margin: 20px auto;
 }
-.menu-btn {
+.header__menu-btn {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -155,8 +201,7 @@ input {
   z-index: 999;
   overflow: hidden;
 }
-
-.menu-btn span {
+.header__menu-btn span {
   width: 20px;
   height: 2px;
   position: absolute;
@@ -167,18 +212,26 @@ input {
   background-color: #FFFFFF;
   transition: all 0.5s;
 }
-
-.menu-btn span:nth-of-type(2) {
+.header__menu-btn span:nth-of-type(2) {
   width: 12px;
   top: calc(50% - 5px);
 }
-
-.menu-btn span:nth-of-type(3) {
+.header__menu-btn span:nth-of-type(3) {
   width: 12px;
   top: calc(50% + 5px);
 }
-
-.menu {
+.header__menu-btn.active span:nth-of-type(1) {
+  display: none;
+}
+.header__menu-btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.header__menu-btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+.header .header-menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -189,55 +242,27 @@ input {
   transform: translateX(-100%);
   transition: transform 0.5s;
 }
-
-.menu.active {
+.header .header-menu.active {
   transform: translateX(0);
 }
-
-.menu li {
+.header .header-menu__item {
   list-style-type: none;
-}
-
-.menu-btn.active span:nth-of-type(1) {
-  display: none;
-}
-
-.menu-btn.active span:nth-of-type(2) {
-  top: 50%;
-  transform: translate(-50%, 0%) rotate(45deg);
-}
-
-.menu-btn.active span:nth-of-type(3) {
-  top: 50%;
-  transform: translate(-50%, 0%) rotate(-45deg);
 }
 
 .page {
   flex: 1 0 auto;
 }
 .page .about-company__wrapper {
+  position: relative;
+  z-index: 1;
   margin: 6px;
   background: #FFFFFF;
   border-radius: 8px;
+  height: 780px;
 }
 .page .about-company__body {
   display: flex;
   flex-direction: row;
-}
-.page .about-company .logo-page__image {
-  margin: 26px 20px 0 0;
-}
-.page .about-company .number-page {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 14px 24px;
-  gap: 10px;
-  width: 72px;
-  height: 52px;
-  border: 2px solid #FFBB33;
-  border-radius: 28px;
-  margin: 26px 0 0 12px;
 }
 .page .about-company .block-page__title {
   font-family: "Mulish";
@@ -246,7 +271,7 @@ input {
   font-size: 32px;
   line-height: 44px;
   color: #000000;
-  margin: 22px 0;
+  margin: 24px 0;
 }
 .page .about-company .block-page .text-group {
   font-family: "Inter";
@@ -268,16 +293,17 @@ input {
   font-size: 16px;
   line-height: 24px;
   color: #000000;
+  margin: 24px 0;
 }
 .page .about-company .block-page .button-more {
-  width: 266px;
+  width: 272px;
   height: 56px;
   background: #FFBB33;
   border-radius: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0 30px 0;
+  margin-bottom: 140px;
 }
 .page .about-company .block-page .button-more__btn {
   font-family: "Inter";
@@ -292,84 +318,413 @@ input {
   background: none;
 }
 .page .about-company .block-page .factory-img__image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   object-position: right;
   object-fit: cover;
+  z-index: -1;
 }
-
-.menu-btn-page {
+.page .about-company .block-page .arrow-about {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 14px 24px;
   gap: 10px;
-  margin-top: 26px;
-  border: 2px solid #FFBB33;
-  border-radius: 28px;
   width: 72px;
   height: 52px;
-  position: relative;
-  z-index: 999;
-  overflow: hidden;
+  background: #FFBB33;
+  border-radius: 28px;
+  margin: auto;
 }
-
-.menu-btn-page span {
-  width: 20px;
-  height: 2px;
-  position: absolute;
-  z-index: 999;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.page .about-company .menu-btn-page {
+  border: 2px solid #FFBB33;
+}
+.page .about-company .menu-btn-page span {
   background-color: black;
-  transition: all 0.5s;
 }
-
-.menu-btn-page span:nth-of-type(2) {
-  width: 12px;
-  top: calc(50% - 5px);
+.page .about-company .number-page {
+  border: 2px solid #FFBB33;
 }
-
-.menu-btn-page span:nth-of-type(3) {
-  width: 12px;
-  top: calc(50% + 5px);
+.page .products-block__wrapper {
+  margin: 6px;
+  background: #FFFFFF;
+  border-radius: 8px;
 }
-
-.block-menu {
-  position: fixed;
+.page .products-block__body {
+  display: flex;
+  flex-direction: row;
+}
+.page .products-block .menu-btn-page {
+  border: 2px solid #FFBB33;
+}
+.page .products-block .menu-btn-page span {
+  background-color: black;
+}
+.page .products-block .number-page {
+  border: 2px solid #FFBB33;
+}
+.page .wind-warm-block {
+  position: relative;
+}
+.page .wind-warm-block__wrapper {
+  margin: 6px;
+}
+.page .wind-warm-block__body {
+  display: flex;
+  flex-direction: row;
+}
+.page .wind-warm-block .box-wind .title-block {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0;
+}
+.page .wind-warm-block .box-wind .title-block__title, .page .wind-warm-block .box-wind .title-block__sub-title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 44px;
+  color: #FFFFFF;
+}
+.page .wind-warm-block .box-wind__sub-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+.page .wind-warm-block .box-wind__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  width: 284px;
+  margin: 24px 0;
+}
+.page .wind-warm-block .box-wind .button-about {
+  width: 272px;
+  height: 56px;
+  background: #FFBB33;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+.page .wind-warm-block .box-wind .button-about__btn {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+  border: none;
+  background: none;
+}
+.page .wind-warm-block .box-wind .arrow-wind {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  gap: 10px;
+  width: 72px;
+  height: 52px;
+  background: #FFBB33;
+  border-radius: 28px;
+  margin: auto;
+}
+.page .wind-warm-block__mobile-bg {
+  position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  background: #FFEFBA;
-  transform: translateX(-100%);
-  transition: transform 0.5s;
+  width: 96%;
+  height: 784px;
+  object-fit: cover;
+  object-position: center;
+  z-index: -999;
+  border-radius: 8px;
+}
+.page .transport-company-block {
+  position: relative;
+  margin-top: 32px;
+}
+.page .transport-company-block__wrapper {
+  margin: 6px;
+}
+.page .transport-company-block__body {
+  display: flex;
+  flex-direction: row;
+}
+.page .transport-company-block .box-transport__title-block {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 44px;
+  color: #FFFFFF;
+  margin: 24px 0;
+}
+.page .transport-company-block .box-transport__sub-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  margin: 24px 0;
+}
+.page .transport-company-block .box-transport__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  max-width: 246px;
+  margin: 24px 0;
+}
+.page .transport-company-block .button-about {
+  width: 272px;
+  height: 56px;
+  background: #FFBB33;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.page .transport-company-block .button-about__btn {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+  border: none;
+  background: none;
+}
+.page .transport-company-block .arrow-transport {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  gap: 10px;
+  width: 72px;
+  height: 52px;
+  background: #FFBB33;
+  border-radius: 28px;
+  margin: auto;
+}
+.page .transport-company-block__mobile-bg {
+  position: absolute;
+  top: 0;
+  width: 96%;
+  height: 784px;
+  object-fit: cover;
+  object-position: center;
+  z-index: -999;
+  border-radius: 8px;
+}
+.page .medical-center-block {
+  position: relative;
+  margin-top: 32px;
+}
+.page .medical-center-block__wrapper {
+  margin: 6px;
+}
+.page .medical-center-block__body {
+  display: flex;
+  flex-direction: row;
+}
+.page .medical-center-block .box-medical__title-block {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 44px;
+  color: #FFFFFF;
+  margin: 24px 0;
+}
+.page .medical-center-block .box-medical__sub-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  margin: 24px 0;
+}
+.page .medical-center-block .box-medical__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin: 24px 0;
+}
+.page .medical-center-block .button-about {
+  width: 272px;
+  height: 56px;
+  background: #FFBB33;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 90px;
+}
+.page .medical-center-block .button-about__btn {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+  border: none;
+  background: none;
+}
+.page .medical-center-block .arrow-medical {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  gap: 10px;
+  width: 72px;
+  height: 52px;
+  background: #FFBB33;
+  border-radius: 28px;
+  margin: auto;
+}
+.page .medical-center-block__mobile-bg {
+  position: absolute;
+  top: 0;
+  width: 96%;
+  height: 784px;
+  object-fit: cover;
+  object-position: center;
+  z-index: -999;
+  border-radius: 8px;
 }
 
-.block-menu.active {
-  transform: translateX(0);
-}
-
-.block-menu li {
-  list-style-type: none;
-}
-
-.menu-btn-page.active span:nth-of-type(1) {
-  display: none;
-}
-
-.menu-btn-page.active span:nth-of-type(2) {
-  top: 50%;
-  transform: translate(-50%, 0%) rotate(45deg);
-}
-
-.menu-btn-page.active span:nth-of-type(3) {
-  top: 50%;
-  transform: translate(-50%, 0%) rotate(-45deg);
-}
-
-footer {
+.footer {
   flex: 0 0 auto;
+  margin-top: 34px;
+}
+.footer__menu {
+  display: flex;
+  flex-direction: row;
+}
+.footer__wrapper-layout {
+  background: #292929;
+  border-radius: 8px;
+  margin: 6px;
+  height: auto;
+}
+.footer .top-footer__title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 44px;
+  color: #FFFFFF;
+  margin: 24px 0;
+}
+.footer .top-footer .contacts-block__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+.footer .top-footer .contacts-block__list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+}
+.footer .top-footer .contacts-block__item {
+  list-style-type: disc;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.footer .top-footer .contacts-block__link {
+  color: inherit;
+}
+.footer .top-footer .contacts-block .mail-contacts {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.footer .top-footer .contacts-block .mail-contacts__title {
+  margin: 24px 0 12px 0;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.footer .top-footer .contacts-block .mail-contacts__link {
+  color: inherit;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.footer .top-footer .contacts-block .address-contacts {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.footer .top-footer .contacts-block .address-contacts__title {
+  margin: 24px 0 12px 0;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.footer .top-footer .contacts-block .address-contacts__street {
+  font-weight: 400;
+  min-width: 270px;
+}
+.footer .top-footer .button-write {
+  width: 272px;
+  height: 56px;
+  background: #FFBB33;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+}
+.footer .top-footer .button-write__btn {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+  border: none;
+  background: none;
 }
 
 html {
@@ -390,4 +745,85 @@ body {
   max-width: 1270px;
   padding: 0px 15px;
   margin: 0 auto;
+}
+
+.logo-page__image {
+  margin: 26px 20px 0 0;
+}
+
+.menu-btn-page {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 14px 24px;
+  gap: 10px;
+  margin-top: 26px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 28px;
+  width: 72px;
+  height: 52px;
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+}
+.menu-btn-page span {
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  transition: all 0.5s;
+}
+.menu-btn-page span:nth-of-type(2) {
+  width: 12px;
+  top: calc(50% - 5px);
+}
+.menu-btn-page span:nth-of-type(3) {
+  width: 12px;
+  top: calc(50% + 5px);
+}
+.menu-btn-page.active span:nth-of-type(1) {
+  display: none;
+}
+.menu-btn-page.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.menu-btn-page.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+.block-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: #FFEFBA;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+.block-menu.active {
+  transform: translateX(0);
+}
+.block-menu__item {
+  list-style-type: none;
+}
+
+.number-page {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 14px 24px;
+  gap: 10px;
+  width: 72px;
+  height: 52px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 28px;
+  margin: 26px 0 0 12px;
 }
