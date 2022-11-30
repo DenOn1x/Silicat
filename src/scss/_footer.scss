@@ -6,12 +6,25 @@
     display: flex;
     flex-direction: row;
   }
+  .logo-page{
+    &__image{
+      margin-top: 10px;
+    }
+  }
+  .menu-btn-page, .number-page{
+    margin-top: 10px;
+  }
+
 
   &__wrapper-layout {
     background: #292929;
     border-radius: 8px;
     margin: 6px;
     height: auto;
+    @media (min-width: 320px) {
+      height: 644px;
+    }
+
   }
 
   .top-footer {
@@ -125,6 +138,51 @@
         background: none;
       }
     }
+  }
+
+  .bottom-footer{
+    &__copy{
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: #FFFFFF;
+      opacity: 0.7;
+      margin: 16px 0 12px 0;
+    }
+    &__confidence{
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+    .create-footer{
+      &__text{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF;
+        opacity: 0.7;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 12px 0;
+      }
+      &__logo{
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+    }
+
   }
 
 }

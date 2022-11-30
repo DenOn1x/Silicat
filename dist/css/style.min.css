@@ -106,6 +106,12 @@ input {
 .header__wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+@media (min-width: 1200px) {
+  .header__wrapper {
+    padding: 0 40px;
+  }
 }
 .header__mobile-bg {
   position: absolute;
@@ -116,20 +122,95 @@ input {
   object-position: center;
   z-index: -999;
 }
+@media (min-width: 768px) {
+  .header__mobile-bg {
+    display: none;
+  }
+}
+.header__mobile-pc-bg {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header__mobile-pc-bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    object-position: center;
+    z-index: -999;
+  }
+}
+.header .logo-header {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header .logo-header {
+    padding-right: 20px;
+  }
+}
 .header .logo-header__image {
-  margin: 26px 30px 0 6px;
+  margin: 26px 32px 0 12px;
+}
+@media (min-width: 768px) {
+  .header .logo-header__image {
+    margin: 0 10px 0 6px;
+  }
+}
+.header .logo-header__title {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header .logo-header__title {
+    display: block;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
 }
 .header .number-header {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  margin: 26px 0 0 12px;
+  padding-right: 10px;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header .number-header {
+    margin-top: 0;
+  }
+}
+.header .number-header__link {
   padding: 14px 24px;
-  gap: 10px;
   width: 72px;
   height: 52px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 28px;
-  margin: 26px 0 0 12px;
+  margin-left: 10px;
+  order: 1;
+}
+.header .number-header__number-link {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header .number-header__number-link {
+    display: block;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    order: 0;
+  }
 }
 .header .number-header__image {
   width: 18px;
@@ -139,6 +220,16 @@ input {
   text-align: center;
   margin-top: 160px;
 }
+@media (min-width: 768px) {
+  .header .body-header .text-block {
+    margin-top: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  .header .body-header .text-block {
+    margin-top: 28px;
+  }
+}
 .header .body-header .text-block__sub-title {
   font-family: "Mulish";
   font-style: normal;
@@ -146,6 +237,23 @@ input {
   font-size: 26px;
   line-height: 40px;
   color: #FFFFFF;
+}
+@media (min-width: 576px) {
+  .header .body-header .text-block__sub-title {
+    font-size: 36px;
+  }
+}
+@media (min-width: 768px) {
+  .header .body-header .text-block__sub-title {
+    font-size: 44px;
+    line-height: 80px;
+    color: #FFFFFF;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .header .body-header .text-block__sub-title {
+    font-size: 64px;
+  }
 }
 .header .body-header .text-block__title {
   font-family: "Mulish";
@@ -155,13 +263,42 @@ input {
   line-height: 60px;
   color: #FFFFFF;
 }
+@media (min-width: 576px) {
+  .header .body-header .text-block__title {
+    font-size: 66px;
+    line-height: 80px;
+  }
+}
+@media (min-width: 768px) {
+  .header .body-header .text-block__title {
+    font-size: 100px;
+    line-height: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .header .body-header .text-block__title {
+    font-size: 160px;
+    line-height: 160px;
+  }
+}
 .header .body-header .logo-body {
   margin: 48px 0;
   text-align: center;
 }
+@media (min-width: 1200px) {
+  .header .body-header .logo-body {
+    margin: 24px;
+  }
+}
 .header .body-header .logo-body__image {
   width: 266px;
   height: 120px;
+}
+@media (min-width: 1200px) {
+  .header .body-header .logo-body__image {
+    width: 436px;
+    height: 200px;
+  }
 }
 .header .body-header__sub-text {
   font-family: "Mulish";
@@ -172,6 +309,16 @@ input {
   text-align: center;
   color: #FFFFFF;
   margin-bottom: 90px;
+}
+@media (min-width: 768px) {
+  .header .body-header__sub-text {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .header .body-header__sub-text {
+    margin-bottom: 50px;
+  }
 }
 .header .arrow-header {
   display: flex;
@@ -185,6 +332,11 @@ input {
   background: #FFBB33;
   border-radius: 28px;
   margin: 20px auto;
+}
+.header__menu-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .header__menu-btn {
   display: flex;
@@ -231,6 +383,23 @@ input {
   top: 50%;
   transform: translate(-50%, 0%) rotate(-45deg);
 }
+.header__btn-title {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header__btn-title {
+    display: block;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding-top: 10px;
+  }
+}
 .header .header-menu {
   position: fixed;
   top: 0;
@@ -260,9 +429,131 @@ input {
   border-radius: 8px;
   height: 780px;
 }
+@media (min-width: 1200px) {
+  .page .about-company__wrapper {
+    height: 872px;
+    margin: 16px;
+  }
+}
 .page .about-company__body {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
+  padding-top: 20px;
+}
+@media (min-width: 768px) {
+  .page .about-company__body {
+    padding: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .page .about-company__body {
+    padding: 0 20px;
+  }
+}
+.page .about-company .logo-page {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .page .about-company .logo-page {
+    padding-right: 20px;
+  }
+}
+.page .about-company .logo-page__title {
+  display: none;
+}
+@media (min-width: 768px) {
+  .page .about-company .logo-page__title {
+    display: block;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+  }
+}
+.page .about-company .logo-page__image {
+  margin: 0 32px 0 12px;
+}
+@media (min-width: 768px) {
+  .page .about-company .logo-page__image {
+    margin-right: 6px;
+  }
+}
+.page .about-company__menu-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .page .about-company__menu-btn-wrapper {
+    margin-top: 36px;
+  }
+}
+.page .about-company__btn-title {
+  display: none;
+}
+@media (min-width: 768px) {
+  .page .about-company__btn-title {
+    display: block;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #000000;
+    padding-top: 10px;
+  }
+}
+.page .about-company .number-page {
+  display: flex;
+  padding-right: 10px;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .page .about-company .number-page {
+    margin-top: 0;
+  }
+}
+.page .about-company .number-page__link {
+  padding: 14px 24px;
+  width: 72px;
+  height: 52px;
+  border: 2px solid #FFBB33;
+  border-radius: 28px;
+  margin-left: 10px;
+  order: 1;
+}
+.page .about-company .number-page__number-link {
+  display: none;
+}
+@media (min-width: 768px) {
+  .page .about-company .number-page__number-link {
+    display: block;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #000000;
+    order: 0;
+  }
+}
+.page .about-company .block-page {
+  padding: 0 20px;
+}
+@media (min-width: 576px) {
+  .page .about-company .block-page {
+    padding: 0 60px;
+  }
 }
 .page .about-company .block-page__title {
   font-family: "Mulish";
@@ -272,6 +563,17 @@ input {
   line-height: 44px;
   color: #000000;
   margin: 24px 0;
+}
+@media (min-width: 576px) {
+  .page .about-company .block-page__title {
+    font-size: 44px;
+    line-height: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .page .about-company .block-page__title {
+    margin: 8px 0 40px 0;
+  }
 }
 .page .about-company .block-page .text-group {
   font-family: "Inter";
@@ -286,6 +588,31 @@ input {
   max-width: 260px;
   margin-bottom: 24px;
 }
+@media (min-width: 576px) {
+  .page .about-company .block-page .text-group {
+    max-width: 500px;
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .page .about-company .block-page .text-group {
+    max-width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .page .about-company .block-page .text-group__sub-text, .page .about-company .block-page .text-group__sub-title {
+    display: none;
+  }
+}
+.page .about-company .block-page .text-group__text-group-pc {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .page .about-company .block-page .text-group__text-group-pc {
+    display: block;
+    max-width: 910px;
+  }
+}
 .page .about-company .block-page__text {
   font-family: "Inter";
   font-style: normal;
@@ -294,6 +621,43 @@ input {
   line-height: 24px;
   color: #000000;
   margin: 24px 0;
+  max-width: 260px;
+}
+@media (min-width: 576px) {
+  .page .about-company .block-page__text {
+    font-size: 20px;
+    max-width: 500px;
+  }
+}
+@media (min-width: 768px) {
+  .page .about-company .block-page__text {
+    display: none;
+  }
+}
+.page .about-company .block-page__text-pc {
+  display: none;
+}
+@media (min-width: 768px) {
+  .page .about-company .block-page__text-pc {
+    display: block;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin: 24px 0;
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .page .about-company .block-page__text-pc {
+    max-width: 800px;
+    font-size: 20px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 48px;
+  }
 }
 .page .about-company .block-page .button-more {
   width: 272px;
@@ -303,7 +667,24 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 140px;
+  margin-bottom: 120px;
+}
+@media (min-width: 576px) {
+  .page .about-company .block-page .button-more {
+    margin-bottom: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .page .about-company .block-page .button-more {
+    margin-bottom: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  .page .about-company .block-page .button-more {
+    width: 192px;
+    height: 56px;
+    margin-bottom: 130px;
+  }
 }
 .page .about-company .block-page .button-more__btn {
   font-family: "Inter";
@@ -325,6 +706,25 @@ input {
   object-fit: cover;
   z-index: -1;
 }
+@media (min-width: 1200px) {
+  .page .about-company .block-page .factory-img__image {
+    display: none;
+  }
+}
+.page .about-company .block-page .factory-img__image-pc {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .page .about-company .block-page .factory-img__image-pc {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    object-position: right;
+    object-fit: cover;
+    z-index: -1;
+  }
+}
 .page .about-company .block-page .arrow-about {
   display: flex;
   flex-direction: row;
@@ -344,9 +744,6 @@ input {
 .page .about-company .menu-btn-page span {
   background-color: black;
 }
-.page .about-company .number-page {
-  border: 2px solid #FFBB33;
-}
 .page .products-block__wrapper {
   margin: 6px;
   background: #FFFFFF;
@@ -362,8 +759,51 @@ input {
 .page .products-block .menu-btn-page span {
   background-color: black;
 }
-.page .products-block .number-page {
-  border: 2px solid #FFBB33;
+.page .products-block__btn-title {
+  display: none;
+}
+@media (min-width: 768px) {
+  .page .products-block__btn-title {
+    display: block;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #000000;
+    padding-top: 10px;
+  }
+}
+.page .activity-block {
+  position: relative;
+}
+.page .activity-block__body {
+  display: flex;
+}
+.page .activity-block .arrow-activity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  gap: 10px;
+  width: 72px;
+  height: 52px;
+  background: #FFBB33;
+  border-radius: 28px;
+  margin: auto;
+}
+.page .activity-block__mobile-bg {
+  position: absolute;
+  top: 0;
+  width: 96%;
+  height: 784px;
+  object-fit: cover;
+  object-position: center;
+  z-index: -999;
+  border-radius: 8px;
 }
 .page .wind-warm-block {
   position: relative;
@@ -630,11 +1070,22 @@ input {
   display: flex;
   flex-direction: row;
 }
+.footer .logo-page__image {
+  margin-top: 10px;
+}
+.footer .menu-btn-page, .footer .number-page {
+  margin-top: 10px;
+}
 .footer__wrapper-layout {
   background: #292929;
   border-radius: 8px;
   margin: 6px;
   height: auto;
+}
+@media (min-width: 320px) {
+  .footer__wrapper-layout {
+    height: 644px;
+  }
 }
 .footer .top-footer__title {
   font-family: "Mulish";
@@ -712,7 +1163,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 24px 0;
+  margin-top: 24px;
 }
 .footer .top-footer .button-write__btn {
   font-family: "Inter";
@@ -725,6 +1176,44 @@ input {
   color: #000000;
   border: none;
   background: none;
+}
+.footer .bottom-footer__copy {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.7;
+  margin: 16px 0 12px 0;
+}
+.footer .bottom-footer__confidence {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.footer .bottom-footer .create-footer__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.7;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 12px 0;
+}
+.footer .bottom-footer .create-footer__logo {
+  text-align: center;
+  margin-bottom: 16px;
 }
 
 html {
@@ -747,8 +1236,38 @@ body {
   margin: 0 auto;
 }
 
+.logo-page {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .logo-page {
+    padding-right: 20px;
+  }
+}
+.logo-page__title {
+  display: none;
+}
+@media (min-width: 768px) {
+  .logo-page__title {
+    display: block;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+  }
+}
 .logo-page__image {
-  margin: 26px 20px 0 0;
+  margin: 0 32px 0 12px;
+}
+@media (min-width: 768px) {
+  .logo-page__image {
+    margin-right: 6px;
+  }
 }
 
 .menu-btn-page {
@@ -757,7 +1276,6 @@ body {
   align-items: flex-start;
   padding: 14px 24px;
   gap: 10px;
-  margin-top: 26px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 28px;
   width: 72px;
@@ -817,13 +1335,37 @@ body {
 
 .number-page {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  padding-right: 10px;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .number-page {
+    margin-top: 0;
+  }
+}
+.number-page__link {
   padding: 14px 24px;
-  gap: 10px;
   width: 72px;
   height: 52px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid #FFBB33;
   border-radius: 28px;
-  margin: 26px 0 0 12px;
+  margin-left: 10px;
+  order: 1;
+}
+.number-page__number-link {
+  display: none;
+}
+@media (min-width: 768px) {
+  .number-page__number-link {
+    display: block;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #000000;
+    order: 0;
+  }
 }

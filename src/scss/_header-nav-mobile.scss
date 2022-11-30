@@ -1,7 +1,31 @@
 
 .logo-page {
+  display: flex;
+  align-items: center;
+  @media (min-width: 768px) {
+    padding-right: 20px;
+  }
+
+  &__title {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #000000;
+    }
+  }
+
   &__image {
-    margin: 26px 20px 0 0;
+    margin: 0 32px 0 12px;
+    @media (min-width: 768px) {
+      margin-right: 6px;
+    }
   }
 }
 .menu-btn-page {
@@ -10,7 +34,6 @@
   align-items: flex-start;
   padding: 14px 24px;
   gap: 10px;
-  margin-top: 26px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   //border: 2px solid #FFBB33;
   border-radius: 28px;
@@ -79,22 +102,36 @@
 }
 .number-page {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 14px 24px;
-  gap: 10px;
-  width: 72px;
-  height: 52px;
-  //border: 2px solid #FFBB33;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 28px;
-  margin: 26px 0 0 12px;
-
-  &__link {
-
+  //margin: 26px 0 0 12px;
+  padding-right: 10px;
+  align-items: center;
+  @media (min-width: 768px) {
+    margin-top: 0;
   }
 
-  &__image {
+  &__link {
+    padding: 14px 24px;
+    width: 72px;
+    height: 52px;
+    border: 2px solid #FFBB33;
+    border-radius: 28px;
+    margin-left: 10px;
+    order: 1;
+  }
 
+  &__number-link {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 32px;
+      text-align: right;
+      letter-spacing: 0.02em;
+      color: #000000;
+      order: 0;
+    }
   }
 }
