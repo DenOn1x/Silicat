@@ -1,35 +1,148 @@
 .footer {
   flex: 0 0 auto;
-  margin-top: 34px;
+  position: relative;
+
+  .page-navigation {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -5%;
+      z-index: 9999;
+      transform: rotate(90deg);
+      &__link {
+        height: 25px;
+        width: 25px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+
+        &:hover {
+          background: #FFBB33;
+        }
+      }
+    }
+  }
 
   &__menu {
     display: flex;
     flex-direction: row;
-  }
-  .logo-page{
-    &__image{
-      margin-top: 10px;
+    justify-content: space-between;
+    padding-top: 20px;
+    @media (min-width: 1200px) {
+      padding: 20px 20px 0;
     }
   }
-  .menu-btn-page, .number-page{
-    margin-top: 10px;
+
+  .logo-page {
+    &__title {
+      color: #FFFFFF;
+    }
   }
 
+  &__menu-btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 768px) {
+      margin-top: 36px;
+    }
+    @media (min-width: 1200px) {
+      margin-right: 12%;
+    }
+
+  }
+
+  &__btn-title {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 32px;
+      text-align: right;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      padding-top: 10px;
+    }
+  }
+
+  .number-page {
+    display: flex;
+    padding-right: 10px;
+    align-items: center;
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
+    @media (min-width: 1200px) {
+      display: none;
+    }
+
+    &__link {
+      padding: 14px 24px;
+      width: 72px;
+      height: 52px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 28px;
+      margin-left: 10px;
+      order: 1;
+    }
+
+    &__number-link {
+      display: none;
+      @media (min-width: 768px) {
+        display: block;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 32px;
+        text-align: right;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        order: 0;
+      }
+    }
+  }
+
+
+  &__wrapper-box {
+    @media (min-width: 1200px) {
+      display: flex;
+      margin: 6px;
+      height: 872px;
+
+    }
+  }
 
   &__wrapper-layout {
     background: #292929;
     border-radius: 8px;
-    margin: 6px;
+    margin: 0 6px 6px 6px;
     height: auto;
     @media (min-width: 320px) {
       height: 644px;
     }
+    @media (min-width: 1200px) {
+      flex: 1 1 60%;
+      border-radius: 16px 0 0 16px;
+      margin: 0;
+      height: auto;
+
+    }
 
   }
 
+
   .top-footer {
     &__body {
-
+      padding: 0 20px;
+      @media (min-width: 1200px) {
+        padding: 0 60px;
+      }
     }
 
     &__title {
@@ -40,6 +153,11 @@
       line-height: 44px;
       color: #FFFFFF;
       margin: 24px 0;
+      @media (min-width: 1200px) {
+        font-size: 64px;
+        line-height: 80px;
+        margin: 0 0 40px 0;
+      }
     }
 
     .contacts-block {
@@ -51,12 +169,19 @@
         line-height: 24px;
         letter-spacing: 0.02em;
         color: #FFFFFF;
+        @media (min-width: 1200px) {
+          font-size: 24px;
+          line-height: 36px;
+        }
       }
 
       &__list {
         display: flex;
         flex-direction: column;
-        padding-left: 24px;
+        padding-left: 20px;
+        @media (min-width: 1200px) {
+
+        }
       }
 
       &__item {
@@ -67,10 +192,38 @@
         font-size: 16px;
         line-height: 24px;
         color: #FFFFFF;
+
+        &:not(:first-child) {
+          white-space: nowrap;
+        }
+
+        @media (min-width: 1200px) {
+          font-size: 20px;
+          line-height: 32px;
+          white-space: normal;
+        }
       }
 
       &__link {
         color: inherit;
+        white-space: nowrap;
+        @media (min-width: 1200px) {
+          color: #FFBB33;
+          white-space: normal;
+        }
+      }
+
+      &__link-mail {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        @media (min-width: 1200px) {
+          font-size: 20px;
+          line-height: 32px;
+        }
       }
 
       .mail-contacts {
@@ -79,11 +232,19 @@
         font-size: 16px;
         line-height: 24px;
         color: #FFFFFF;
+        @media (min-width: 1200px) {
+          margin: 40px 0;
+        }
 
         &__title {
           margin: 24px 0 12px 0;
           font-weight: 500;
           letter-spacing: 0.02em;
+          @media (min-width: 1200px) {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 36px;
+          }
 
         }
 
@@ -91,6 +252,12 @@
           color: inherit;
           font-weight: 400;
           text-decoration: underline;
+          @media (min-width: 1200px) {
+            text-decoration: none;
+            color: #FFBB33;
+            font-size: 20px;
+            line-height: 32px;
+          }
 
         }
       }
@@ -106,15 +273,27 @@
           margin: 24px 0 12px 0;
           font-weight: 500;
           letter-spacing: 0.02em;
+          @media (min-width: 1200px) {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 36px;
+            margin: 0 0 12px 0;
+          }
 
         }
 
         &__street {
           font-weight: 400;
           min-width: 270px;
+          @media (min-width: 1200px) {
+            max-width: 720px;
+            font-size: 20px;
+            line-height: 32px;
+          }
         }
       }
     }
+
     .button-write {
       width: 272px;
       height: 56px;
@@ -123,7 +302,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 24px;
+      margin: 24px auto 0;
+      @media (min-width: 1200px) {
+        display: none;
+      }
 
       &__btn {
         font-family: "Inter";
@@ -140,8 +322,237 @@
     }
   }
 
-  .bottom-footer{
-    &__copy{
+  .write-footer {
+    display: none;
+    @media (min-width: 1200px) {
+      display: block;
+      flex: 1 1 40%;
+      background: #1F1F1F;
+      border-radius: 0 16px 16px 0;
+    }
+
+    &__body {
+      padding: 0 60px;
+    }
+
+    &__title {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 48px;
+      color: #FFFFFF;
+      margin: 58px 0 40px 0;
+
+    }
+
+    .name-block {
+      display: flex;
+      flex-direction: column;
+
+      &__name-lbl {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FFFFFF;
+      }
+
+      &__name {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 12px 24px;
+        gap: 10px;
+        width: 476px;
+        height: 52px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 28px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FFFFFF;
+        opacity: 0.7;
+        background: none;
+        margin-top: 10px;
+        @media (min-width: 1400px) {
+          width: 576px;
+        }
+      }
+    }
+
+    .number-block {
+      margin: 40px 0;
+
+      &__number-lbl {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FFFFFF;
+      }
+
+      &__number {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 12px 24px;
+        gap: 10px;
+        width: 476px;
+        height: 52px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 28px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FFFFFF;
+        opacity: 0.7;
+        background: none;
+        margin-top: 10px;
+        @media (min-width: 1400px) {
+          width: 576px;
+        }
+      }
+    }
+
+    .message-block {
+      &__message-lbl {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FFFFFF;
+      }
+
+      &__message {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 16px 24px;
+        gap: 10px;
+        width: 476px;
+        height: 156px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 28px;
+        background: none;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FFFFFF;
+        opacity: 0.7;
+        margin-top: 10px;
+        @media (min-width: 1400px) {
+          width: 576px;
+        }
+      }
+    }
+
+    .wrapper-btn {
+      display: flex;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .form-footer__text {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #FFFFFF;
+      max-width: 370px;
+    }
+
+    .form-footer__text-gold {
+      color: #FFBB33 !important;
+    }
+
+    .button-form {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 36px;
+      gap: 4px;
+      width: 189px;
+      height: 56px;
+      background: #FFBB33;
+      border-radius: 28px;
+      margin-right: 25px;
+
+      &__btn {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #000000;
+        border: none;
+        background: none;
+      }
+    }
+  }
+
+  .number-footer {
+    display: none;
+    @media (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 56px 28px 0 0;
+    }
+
+    &__link {
+      padding: 14px 24px;
+      width: 72px;
+      height: 52px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 28px;
+      margin-left: 10px;
+      order: 1;
+    }
+
+    &__number-link {
+      display: block;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 32px;
+      text-align: right;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      order: 0;
+    }
+  }
+
+  .bottom-footer {
+    padding: 0 20px;
+    @media (min-width: 1200px) {
+      padding: 0 60px;
+    }
+
+    &__wrapper {
+      @media (min-width: 1200px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+      }
+    }
+
+    &__copy {
       font-family: "Inter";
       font-style: normal;
       font-weight: 400;
@@ -151,8 +562,13 @@
       color: #FFFFFF;
       opacity: 0.7;
       margin: 16px 0 12px 0;
+      @media (min-width: 1200px) {
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
-    &__confidence{
+
+    &__confidence {
       font-family: "Inter";
       font-style: normal;
       font-weight: 400;
@@ -160,9 +576,20 @@
       line-height: 20px;
       text-align: center;
       color: #FFFFFF;
+      @media (min-width: 1200px) {
+        color: #FFBB33;
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
-    .create-footer{
-      &__text{
+
+    .create-footer {
+      @media (min-width: 1200px) {
+        display: flex;
+        align-items: center;
+      }
+
+      &__text {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
@@ -175,10 +602,18 @@
         order: 0;
         flex-grow: 0;
         margin: 12px 0;
+        @media (min-width: 1200px) {
+          font-size: 18px;
+          line-height: 28px;
+        }
       }
-      &__logo{
+
+      &__logo {
         text-align: center;
         margin-bottom: 16px;
+        @media (min-width: 1200px) {
+          margin: 0 0 0 12px;
+        }
       }
 
     }

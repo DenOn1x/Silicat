@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Главная</title>
 </head>
 <body>
-<header class="header">
+<header class="header" id="header-page">
     <div class="header__primary">
         <div class="header__wrapper">
             <a href="#" class="header__logo logo-header">
@@ -70,9 +70,19 @@
             </div>
         </div>
         <img class="header__mobile-bg" src="img/bg_first_block-mb.png" alt="bg-mobile">
-        <img class="header__mobile-pc-bg" src="img/bg_first_block-pc.png" alt="bg-mobile">
+        <img class="header__mobile-pc-bg" src="img/bg_first_block-pc.png" alt="bg-pc">
     </div>
 
+    <div class="page-navigation">
+        <a href="#header-page" class="page-navigation__link"></a>
+        <a href="#about-cmp" class="page-navigation__link"></a>
+        <a href="" class="page-navigation__link"></a>
+        <a href="" class="page-navigation__link"></a>
+        <a href="" class="page-navigation__link"></a>
+        <a href="" class="page-navigation__link"></a>
+        <a href="" class="page-navigation__link"></a>
+        <a href="#footer-page" class="page-navigation__link"></a>
+    </div>
 </header>
 <main class="page">
     <section class="about-company" id="about-cmp">
@@ -158,14 +168,25 @@
 
             <!--            </div>-->
         </div>
+        <div class="page-navigation">
+            <a href="#header-page" class="page-navigation__link"></a>
+            <a href="#about-cmp" class="page-navigation__link"></a>
+            <a href="#products-page" class="page-navigation__link"></a>
+            <a href="" class="page-navigation__link"></a>
+            <a href="" class="page-navigation__link"></a>
+            <a href="" class="page-navigation__link"></a>
+            <a href="" class="page-navigation__link"></a>
+            <a href="#footer-page" class="page-navigation__link"></a>
+        </div>
     </section>
 
 
-    <section class="products-block" id="products">
+    <section class="products-block" id="products-page">
         <div class="products-block__wrapper">
             <div class="products-block__body">
                 <a href="#" class="about-company__logo logo-page">
                     <img src="img/logo.svg" alt="logo-page" class="logo-page__image">
+                    <span class="logo-page__title">Газосиликат</span>
                 </a>
                 <div class="products-block__menu-btn-wrapper">
                     <div class="menu-btn menu-btn-page">
@@ -194,15 +215,344 @@
                     </a>
                 </div>
             </div>
+            <div class="products-block__box box-product">
+                <div class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="splide__slide-blocks blocks-slide">
+                                    <div class="blocks-slide__title">
+                                        Продукция
+                                    </div>
+                                    <div class="blocks-slide__wrapper-block-mobile">
+                                        <div class="blocks-slide__image-box">
+                                            <img src="img/blocks-image.svg" alt="blocks"
+                                                 class="blocks-slide__img-blocks">
+                                            <div class="blocks-slide__sub-title">
+                                                Газосиликатные блоки
+                                            </div>
+                                        </div>
+                                        <div class="blocks-slide__text">
+                                            Блоки из ячеистого бетона обладают хорошими тепло - и звукоизолирующими
+                                            свойствами,
+                                            они огнестойки, легко обрабатываются столярным инструментом, сверлятся,
+                                            фрезеруются,
+                                            что позволяет решать вопросы архитектурной выразительности.
+                                        </div>
+                                        <div class="blocks-slide__text-none">
+                                            В производстве стеновых блоков из ячеистого бетона используется техника
+                                            точной резки,
+                                            благодаря чему обеспечивается высокая точность размеров изделий.
+                                            Вести кладку из газосиликатных блоков можно с помощью клеевых растворов,
+                                            так как у этих изделий очень точные геометрические характеристики,
+                                            что позволяет снизить потери тепла через вертикальные швы.
+                                        </div>
+                                        <div class="blocks-slide__number-block block-number">
+                                            <div class="block-number__name">
+                                                Телефон для заказа:
+                                            </div>
+                                            <a href="tel:+375222777700" class="block-number__number">+375 (222)
+                                                77-77-00</a>
+                                        </div>
+                                        <div class="blocks-slide__wrapper-btns">
+                                            <div class="blocks-slide__button button-more">
+                                                <button class="button-more__btn">
+                                                    подробнее
+                                                </button>
+                                            </div>
+                                            <div class="blocks-slide__wrapper-price">
+                                                <div class="blocks-slide__price-rb rb-price">
+                                                    <img src="img/save.svg" alt="image-price" class="rb-price__img">
+                                                    <a href="#" class="rb-price__text">Цены РБ</a>
+                                                </div>
+                                                <div class="blocks-slide__price-rb rf-price">
+                                                    <img src="img/save.svg" alt="image-price" class="rf-price__img">
+                                                    <a href="#" class="rf-price__text">Цены РФ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="blocks-slide__wrapper-block-pc">
+                                        <div class="blocks-slide__image-box">
+                                            <img src="img/blocks-image.svg" alt="blocks"
+                                                 class="blocks-slide__img-blocks">
+                                        </div>
+                                        <div class="blocks-slide__wrapper-text-pc">
+                                            <div class="blocks-slide__sub-title">
+                                                Газосиликатные блоки
+                                            </div>
+                                            <div class="blocks-slide__text">
+                                                Блоки из ячеистого бетона обладают хорошими тепло - и звукоизолирующими
+                                                свойствами,
+                                                они огнестойки, легко обрабатываются столярным инструментом, сверлятся,
+                                                фрезеруются,
+                                                что позволяет решать вопросы архитектурной выразительности.
+                                            </div>
+                                            <div class="blocks-slide__text-none">
+                                                В производстве стеновых блоков из ячеистого бетона используется техника
+                                                точной резки,
+                                                благодаря чему обеспечивается высокая точность размеров изделий.
+                                                Вести кладку из газосиликатных блоков можно с помощью клеевых растворов,
+                                                так как у этих изделий очень точные геометрические характеристики,
+                                                что позволяет снизить потери тепла через вертикальные швы.
+                                            </div>
+                                            <div class="blocks-slide__number-block block-number">
+                                                <div class="block-number__name">
+                                                    Телефон для заказа:
+                                                </div>
+                                                <a href="tel:+375222777700" class="block-number__number">+375 (222)
+                                                    77-77-00</a>
+                                            </div>
+                                            <div class="blocks-slide__wrapper-btns">
+                                                <div class="blocks-slide__button button-more">
+                                                    <button class="button-more__btn">
+                                                        подробнее
+                                                    </button>
+                                                </div>
+                                                <div class="blocks-slide__wrapper-price">
+                                                    <div class="blocks-slide__price-rb rb-price">
+                                                        <div class="blocks-slide__wrapper-border-img">
+                                                            <img src="img/arrow-black.svg" alt="image-price"
+                                                                 class="rb-price__img">
+                                                        </div>
+                                                        <a href="#" class="rb-price__text">Цены РБ</a>
+                                                    </div>
+                                                    <div class="blocks-slide__price-rb rf-price">
+                                                        <div class="blocks-slide__wrapper-border-img">
+                                                            <img src="img/arrow-black.svg" alt="image-price"
+                                                                 class="rf-price__img">
+                                                        </div>
+                                                        <a href="#" class="rf-price__text">Цены РФ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </li>
+                            <li class="splide__slide">
+                                <div class="splide__slide-blocks blocks-slide">
+                                    <div class="blocks-slide__title">
+                                        Продукция
+                                    </div>
+                                    <div class="blocks-slide__wrapper-block-mobile">
+                                        <div class="blocks-slide__image-box">
+                                            <img src="img/transport.svg" alt="blocks" class="blocks-slide__img-blocks">
+                                            <div class="blocks-slide__sub-title">
+                                                Бетон и растворы
+                                            </div>
+                                        </div>
+                                        <div class="blocks-slide__text">
+                                            Общество с ограниченной ответственностью «Газосиликат Могилёв»
+                                            более 10 лет осуществляет оптово-розничные поставки бетонных и
+                                            растворных смесей собственного производства. Современное оборудование,
+                                            строгий контроль сырья и лабораторные испытания каждой партии продукции
+                                            обеспечивают
+                                            соответствие смесей
+                                            заявленным характеристикам и требованиям СТБ 1035-96 и СТБ 1307-2012.
+                                        </div>
+                                        <div class="blocks-slide__text-none">
+                                            В производстве стеновых блоков из ячеистого бетона используется техника
+                                            точной резки,
+                                            благодаря чему обеспечивается высокая точность размеров изделий.
+                                            Вести кладку из газосиликатных блоков можно с помощью клеевых растворов,
+                                            так как у этих изделий очень точные геометрические характеристики,
+                                            что позволяет снизить потери тепла через вертикальные швы.
+                                        </div>
+                                        <div class="blocks-slide__wrapper-btns">
+                                            <div class="blocks-slide__button button-more">
+                                                <button class="button-more__btn">
+                                                    подробнее
+                                                </button>
+                                            </div>
+                                            <div class="blocks-slide__wrapper-price">
+                                                <div class="blocks-slide__price-rb rb-price">
+                                                    <img src="img/cart.svg" alt="image-price" class="rb-price__img">
+                                                    <a href="#" class="rb-price__text">Купить</a>
+                                                </div>
+                                                <div class="blocks-slide__price-rb rf-price">
+                                                    <img src="img/save.svg" alt="image-price" class="rf-price__img">
+                                                    <a href="#" class="rf-price__text">Цены</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="blocks-slide__wrapper-block-pc">
+                                        <div class="blocks-slide__image-box">
+                                            <img src="img/transport.svg" alt="blocks" class="blocks-slide__img-blocks">
+                                        </div>
+                                        <div class="blocks-slide__wrapper-text-pc">
+                                            <div class="blocks-slide__sub-title">
+                                                Бетон и растворы
+                                            </div>
+                                            <div class="blocks-slide__text">
+                                                Общество с ограниченной ответственностью «Газосиликат Могилёв» более 10
+                                                лет
+                                                осуществляет оптово-розничные поставки бетонных и растворных смесей
+                                                собственного производства.
+                                                Современное оборудование, строгий контроль сырья и лабораторные
+                                                испытания каждой партии
+                                                продукции обеспечивают соответствие смесей
+                                                заявленным характеристикам и требованиям СТБ 1035-96 и СТБ 1307-2012.
+                                            </div>
+                                            <div class="blocks-slide__text-none">
+                                                Бетонные и растворные смеси применяются для выполнения строительных
+                                                работ
+                                                по устройству фундаментов, монолитных конструкций и др.
+                                                видов строительных работ и изделий.
+                                            </div>
+                                            <div class="blocks-slide__wrapper-btns">
+                                                <div class="blocks-slide__button button-more">
+                                                    <button class="button-more__btn">
+                                                        подробнее
+                                                    </button>
+                                                </div>
+                                                <div class="blocks-slide__wrapper-price">
+                                                    <div class="blocks-slide__price-rb rb-price">
+                                                        <div class="blocks-slide__wrapper-border-img">
+                                                            <img src="img/arrow-black.svg" alt="image-price"
+                                                                 class="rb-price__img">
+                                                        </div>
+                                                        <a href="#" class="rb-price__text">Цены</a>
+                                                    </div>
+                                                    <div class="blocks-slide__price-rb rf-price">
+                                                        <div class="blocks-slide__wrapper-border-img">
+                                                            <img src="img/arrow-black.svg" alt="image-price"
+                                                                 class="rf-price__img">
+                                                        </div>
+                                                        <a href="#" class="rf-price__text">Цены РФ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </li>
+                            <li class="splide__slide">
+                                <div class="splide__slide-blocks blocks-slide">
+                                    <div class="blocks-slide__title">
+                                        Продукция
+                                    </div>
+                                    <div class="blocks-slide__wrapper-block-mobile">
+                                        <div class="blocks-slide__image-box">
+                                            <img src="img/vetropark.svg" alt="blocks" class="blocks-slide__img-blocks">
+                                            <div class="blocks-slide__sub-title">
+                                                Третья позиция
+                                            </div>
+                                        </div>
+                                        <div class="blocks-slide__text">
+                                            Бетонные и растворные смеси применяются для выполнения
+                                            строительных работ по устройству фундаментов, монолитных конструкций и др.
+                                            видов строительных работ и изделий.
+                                        </div>
+                                        <div class="blocks-slide__text-none">
+                                            В производстве стеновых блоков из ячеистого бетона используется техника
+                                            точной резки,
+                                            благодаря чему обеспечивается высокая точность размеров изделий.
+                                            Вести кладку из газосиликатных блоков можно с помощью клеевых растворов,
+                                            так как у этих изделий очень точные геометрические характеристики,
+                                            что позволяет снизить потери тепла через вертикальные швы.
+                                        </div>
+
+                                        <div class="blocks-slide__wrapper-btns">
+                                            <div class="blocks-slide__button button-more">
+                                                <button class="button-more__btn">
+                                                    подробнее
+                                                </button>
+                                            </div>
+                                            <div class="blocks-slide__wrapper-price">
+                                                <div class="blocks-slide__price-rb rb-price">
+                                                    <img src="img/save.svg" alt="image-price" class="rb-price__img">
+                                                    <a href="#" class="rb-price__text">Цены</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="blocks-slide__wrapper-block-pc">
+                                        <div class="blocks-slide__image-box">
+                                            <img src="img/vetropark-other.svg" alt="blocks"
+                                                 class="blocks-slide__img-blocks">
+                                        </div>
+                                        <div class="blocks-slide__wrapper-text-pc">
+                                            <div class="blocks-slide__sub-title">
+                                                Третья позиция (пример)
+                                            </div>
+                                            <div class="blocks-slide__text">
+                                                Общество с ограниченной ответственностью «Газосиликат Могилёв» более 10
+                                                лет
+                                                осуществляет оптово-розничные поставки бетонных и растворных смесей
+                                                собственного производства.
+                                                Современное оборудование, строгий контроль сырья и лабораторные
+                                                испытания
+                                                каждой партии продукции обеспечивают
+                                                соответствие смесей заявленным характеристикам и требованиям СТБ 1035-96
+                                                и СТБ 1307-2012
+                                            </div>
+                                            <div class="blocks-slide__text-none">
+                                                Бетонные и растворные смеси применяются для
+                                                выполнения строительных работ по устройству
+                                                фундаментов,
+                                                монолитных конструкций и др. видов строительных работ и изделий.
+                                            </div>
+                                            <div class="blocks-slide__wrapper-btns">
+                                                <div class="blocks-slide__button button-more">
+                                                    <button class="button-more__btn">
+                                                        подробнее
+                                                    </button>
+                                                </div>
+                                                <div class="blocks-slide__wrapper-price">
+                                                    <div class="blocks-slide__price-rb rb-price">
+                                                        <div class="blocks-slide__wrapper-border-img">
+                                                            <img src="img/arrow-black.svg" alt="image-price"
+                                                                 class="rb-price__img">
+                                                        </div>
+                                                        <a href="#" class="rb-price__text">Цены</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="blocks-slide__arrow arrow-about">
+                    <a href="#" class="arrow-about__link">
+                        <img src="img/arrow-down.svg" alt="arrow-down" class="arrow-about__image">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="page-navigation">
+            <a href="#header-page" class="page-navigation__link"></a>
+            <a href="#about-cmp" class="page-navigation__link"></a>
+            <a href="#products-page" class="page-navigation__link"></a>
+            <a href="#activity-page" class="page-navigation__link"></a>
+            <a href="#wind-warm-page" class="page-navigation__link"></a>
+            <a href="#transport-company-page" class="page-navigation__link"></a>
+            <a href="#medical-center-page" class="page-navigation__link"></a>
+            <a href="#footer-page" class="page-navigation__link"></a>
         </div>
     </section>
 
 
-    <section class="activity-block" id="activity">
+    <section class="activity-block" id="activity-page">
         <div class="activity-block__wrapper">
             <div class="activity-block__body">
                 <a href="#" class="about-company__logo logo-page">
                     <img src="img/logo.svg" alt="logo-page" class="logo-page__image">
+                    <span class="logo-page__title">Газосиликат</span>
                 </a>
                 <div class="activity-block__menu-btn-wrapper">
                     <div class="menu-btn menu-btn-page">
@@ -232,34 +582,50 @@
                     </a>
                 </div>
             </div>
-            <!--                <div class="activity-block__box box-activity">-->
-            <!--                    <div class="box-activity__title">-->
-            <!--                        Деятельность-->
-            <!--                    </div>-->
-            <!--                    <div class="box-activity__modals">-->
 
-            <!--                    </div>-->
-            <!--                    <div class="box-activity__pull">-->
+            <div class="activity-block__box box-activity">
+                <div class="box-activity__title">
+                    Деятельность
+                </div>
+                <div class="box-activity__text">
+                    «Газосиликат» работает для строительных, торговых организаций и частных
+                    застройщиков. Предлагаем качество,
+                    подтвержденное европейскими сертификатами, по доступной цене.
+                </div>
 
-            <!--                    </div>-->
+                <div class="box-activity__arrow arrow-activity">
+                    <div class="arrow-activity__pull">
+                        <span class="arrow-activity__pulse">
+                            Потянуть
+                        </span>
+                    </div>
+                    <a href="#" class="arrow-activity__link">
+                        <img src="img/arrow-down.svg" alt="arrow-down" class="arrow-activity__image">
+                    </a>
+                </div>
+            </div>
 
-            <!--                    <div class="box-activity__arrow arrow-activity">-->
-            <!--                        <a href="#" class="arrow-activity__link">-->
-            <!--                            <img src="img/arrow-down.svg" alt="arrow-down" class="arrow-activity__image">-->
-            <!--                        </a>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-
-            <!--  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Adb3a590dd3301419ba8dfc252d518e6174322857fbe7e415bf43d8538671751f&amp;source=constructor" width="320" height="720" frameborder="0"></iframe>    -->
+            <div id="map"></div>
+        </div>
+        <div class="page-navigation">
+            <a href="#header-page" class="page-navigation__link"></a>
+            <a href="#about-cmp" class="page-navigation__link"></a>
+            <a href="#products-page" class="page-navigation__link"></a>
+            <a href="#activity-page" class="page-navigation__link"></a>
+            <a href="#wind-warm-page" class="page-navigation__link"></a>
+            <a href="#transport-company-page" class="page-navigation__link"></a>
+            <a href="#medical-center-page" class="page-navigation__link"></a>
+            <a href="#footer-page" class="page-navigation__link"></a>
         </div>
     </section>
 
 
-    <section class="wind-warm-block" id="wind-warm">
+    <section class="wind-warm-block" id="wind-warm-page">
         <div class="wind-warm-block__wrapper">
             <div class="wind-warm-block__body">
                 <a href="#" class="about-company__logo logo-page">
                     <img src="img/logo.svg" alt="logo-page" class="logo-page__image">
+                    <span class="logo-page__title">Газосиликат</span>
                 </a>
                 <div class="wind-warm-block__menu-btn-wrapper">
                     <div class="menu-btn menu-btn-page">
@@ -303,9 +669,19 @@
                     которая в полном размере будет покрывать потребности предприятия,
                     а также даст возможность ее реализации государству.
                 </div>
+                <div class="box-wind__text-none">
+                    За счет собственной вырабатываемой электрической
+                    энергии значительно снижается себестоимость выпускаемой продукции,
+                    что в свою очередь позволит достойно конкурировать на внешних рынках сбыта.
+                </div>
                 <div class="box-wind__button button-about">
                     <button class="button-about__btn">
-                        о проекте
+                        <span class="button-about__btn-text">
+                            о проекте
+                        </span>
+                        <span class="button-about__btn-text-none">
+                            подробнее о проекте
+                        </span>
                     </button>
                 </div>
                 <div class="box-wind__arrow arrow-wind">
@@ -315,15 +691,27 @@
                 </div>
             </div>
             <img class="wind-warm-block__mobile-bg" src="img/wind-bg.png" alt="bg-mobile">
+            <img class="wind-warm-block__mobile-bg-pc" src="img/wind-bg-pc.png" alt="bg-mobile">
+        </div>
+        <div class="page-navigation">
+            <a href="#header-page" class="page-navigation__link"></a>
+            <a href="#about-cmp" class="page-navigation__link"></a>
+            <a href="#products-page" class="page-navigation__link"></a>
+            <a href="#activity-page" class="page-navigation__link"></a>
+            <a href="#wind-warm-page" class="page-navigation__link"></a>
+            <a href="#transport-company-page" class="page-navigation__link"></a>
+            <a href="#medical-center-page" class="page-navigation__link"></a>
+            <a href="#footer-page" class="page-navigation__link"></a>
         </div>
     </section>
 
 
-    <section class="transport-company-block" id="transport-company">
+    <section class="transport-company-block" id="transport-company-page">
         <div class="transport-company-block__wrapper">
             <div class="transport-company-block__body">
                 <a href="#" class="about-company__logo logo-page">
                     <img src="img/logo.svg" alt="logo-page" class="logo-page__image">
+                    <span class="logo-page__title">Газосиликат</span>
                 </a>
                 <div class="transport-company-block__menu-btn-wrapper">
                     <div class="menu-btn menu-btn-page">
@@ -366,9 +754,24 @@
                     что позволит контролировать перемещение
                     и состояние грузов клиентов в режиме реального времени.
                 </div>
+                <div class="box-transport__text-none-big">
+                    Машины уже оснащены GPS-системой, что позволит контролировать
+                    перемещение и состояние грузов клиентов в режиме реального времени.
+                    Все грузы перевозятся
+                    только на своих машинах, не прибегая к услугам сторонних организаций.
+                </div>
+                <div class="box-transport__text-none">
+                    Грузы застрахованы, плюс используется
+                    дополнительный вид страхования – страхование ответственности перевозчика.
+                </div>
                 <div class="box-transport__button button-about">
                     <button class="button-about__btn">
-                        о проекте
+                        <span class="button-about__btn-text">
+                            о проекте
+                        </span>
+                        <span class="button-about__btn-text-none">
+                            подробнее о проекте
+                        </span>
                     </button>
                 </div>
                 <div class="box-transport__arrow arrow-transport">
@@ -378,14 +781,26 @@
                 </div>
             </div>
             <img class="transport-company-block__mobile-bg" src="img/transport-bg.png" alt="bg-mobile">
+            <img class="transport-company-block__mobile-bg-pc" src="img/transport-bg-pc.png" alt="bg-pc">
+        </div>
+        <div class="page-navigation">
+            <a href="#header-page" class="page-navigation__link"></a>
+            <a href="#about-cmp" class="page-navigation__link"></a>
+            <a href="#products-page" class="page-navigation__link"></a>
+            <a href="#activity-page" class="page-navigation__link"></a>
+            <a href="#wind-warm-page" class="page-navigation__link"></a>
+            <a href="#transport-company-page" class="page-navigation__link"></a>
+            <a href="#medical-center-page" class="page-navigation__link"></a>
+            <a href="#footer-page" class="page-navigation__link"></a>
         </div>
     </section>
 
-    <section class="medical-center-block" id="medical-center">
+    <section class="medical-center-block" id="medical-center-page">
         <div class="medical-center-block__wrapper">
             <div class="medical-center-block__body">
                 <a href="#" class="about-company__logo logo-page">
                     <img src="img/logo.svg" alt="logo-page" class="logo-page__image">
+                    <span class="logo-page__title">Газосиликат</span>
                 </a>
                 <div class="medical-center-block__menu-btn-wrapper">
                     <div class="menu-btn menu-btn-page">
@@ -426,9 +841,23 @@
                     созданный для диагностики заболеваний на самом современном оборудовании.
                     Здесь предусмотрено все – ухоженная территория, красивое здание, комфортные кабинеты.
                 </div>
+                <div class="box-medical__text-none-sub">
+                    Прием ведут лучшие квалифицированные специалисты с большим
+                    опытом работы.
+                </div>
+                <div class="box-medical__text-none">
+                    В арсенале клиники передовое оборудование и своя лаборатория.
+                    Начиная с обследования на уникальном МРТ 3.0Т и 1.5Т.
+                </div>
+
                 <div class="box-medical__button button-about">
                     <button class="button-about__btn">
-                        о проекте
+                        <span class="button-about__btn-text">
+                            о проекте
+                        </span>
+                        <span class="button-about__btn-text-none">
+                            подробнее о проекте
+                        </span>
                     </button>
                 </div>
                 <div class="box-medical__arrow arrow-medical">
@@ -438,22 +867,39 @@
                 </div>
             </div>
             <img class="medical-center-block__mobile-bg" src="img/medical-bg.png" alt="bg-mobile">
+            <img class="medical-center-block__mobile-bg-pc" src="img/medical-bg-pc.png" alt="bg-pc">
+        </div>
+        <div class="page-navigation">
+            <a href="#header-page" class="page-navigation__link"></a>
+            <a href="#about-cmp" class="page-navigation__link"></a>
+            <a href="" class="page-navigation__link"></a>
+            <a href="" class="page-navigation__link"></a>
+            <a href="" class="page-navigation__link"></a>
+            <a href="" class="page-navigation__link"></a>
+            <a href="" class="page-navigation__link"></a>
+            <a href="#footer-page" class="page-navigation__link"></a>
         </div>
     </section>
 
 </main>
-<footer class="footer">
+<footer class="footer" id="footer-page">
     <div class="footer__wrapper">
-        <div class="footer__wrapper-layout">
-            <div class="footer__container _container">
+        <div class="footer__wrapper-box">
+            <div class="footer__wrapper-layout">
                 <div class="footer__menu">
                     <a href="#" class="about-company__logo logo-page">
                         <img src="img/logo.svg" alt="logo-page" class="logo-page__image">
+                        <span class="logo-page__title">Газосиликат</span>
                     </a>
-                    <div class="menu-btn menu-btn-page">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <div class="footer__menu-btn-wrapper">
+                        <div class="menu-btn menu-btn-page">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="footer__btn-title">
+                            Меню
+                        </div>
                     </div>
                     <div class="menu block-menu">
                         <nav class="block-menu__navigation">
@@ -468,12 +914,12 @@
                     <div class="about-company__number number-page">
                         <a href="tel:+375222777700" class="number-page__link">
                             <img class="number-page__image" src="img/phone-number.svg" alt="phone-number">
+                            <a href="tel:+375222777700" class="number-page__number-link">+375 (222) 77-77-00</a>
                         </a>
                     </div>
                 </div>
-
                 <div class="footer__top top-footer">
-                    <div class="top-footer__container _container">
+                    <div class="top-footer__wrapper">
                         <div class="top-footer__body">
                             <div class="top-footer__title">
                                 Контакты
@@ -486,7 +932,7 @@
                                     <li class="contacts-block__item">
                                         Отдел продаж
                                         <a href="tel:+375222777701" class="contacts-block__link">+375 (222) 777-701</a>
-                                        <a href="mailto:mail@gazosilicat.ru" class="contacts-block__link">(gazosilicat@mail.ru)</a>
+                                        <a href="mailto:mail@gazosilicat.ru" class="contacts-block__link-mail">(gazosilicat@mail.ru)</a>
                                     </li>
                                     <li class="contacts-block__item">
                                         Секретарь:
@@ -518,42 +964,99 @@
                                         Вейнянский с/с, д.Затишье.
                                     </div>
                                 </div>
-
                             </div>
-
+                        </div>
+                        <div class="top-footer__button button-write">
+                            <button class="button-write__btn">
+                                написать нам
+                            </button>
                         </div>
                     </div>
-                    <div class="top-footer__button button-write">
-                        <button class="button-write__btn">
-                            написать нам
-                        </button>
+
+                </div>
+            </div>
+
+
+            <div class="top-footer__write-to-us write-footer">
+                <div class="about-company__number number-footer ">
+                    <a href="tel:+375222777700" class="number-footer__link">
+                        <img class="number-footer__image" src="img/phone-number.svg" alt="phone-number">
+                        <a href="tel:+375222777700" class="number-footer__number-link">+375 (222) 77-77-00</a>
+                    </a>
+                </div>
+
+                <div class="write-footer__body">
+                    <div class="write-footer__title">
+                        Напишите нам
                     </div>
+                    <form action="#" class="write-footer__form form-footer">
+                        <div class="form-footer__name name-block">
+                            <label for="name-block__name" class="name-block__name-lbl">Ваше имя</label>
+                            <input type="text" class="name-block__name" id="name-block__name" placeholder="Введите имя">
+                        </div>
+                        <div class="form-footer__number number-block">
+                            <label for="number-block__number" class="number-block__number-lbl">Мобильный телефон</label>
+                            <input type="text" class="number-block__number" id="number-block__number"
+                                   placeholder="+375 ( _ _ ) _ _ _ - _ _ - _ _">
+                        </div>
+                        <div class="form-footer__message message-block">
+                            <label for="message-block__message" class="message-block__message-lbl">Сообщение</label>
+                            <textarea type="text" class="message-block__message" id="message-block__message"
+                                      placeholder="Текст сообщения"></textarea>
+                        </div>
+                        <div class="form-footer__wrapper-btn wrapper-btn">
+                            <div class="form-footer__button button-form">
+                                <button class="button-form__btn">
+                                    отправить
+                                </button>
+                            </div>
+                            <div class="form-footer__text">
+                                Нажимая на кнопку «Отправить», вы соглашаетесь на
+                                <span class="form-footer__text-gold">
+                                обработку своих данных
+                                </span>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
 
+
         <div class="footer__bottom bottom-footer">
-            <div class="bottom-footer__container _container">
-                <div class="bottom-footer__copy">
-                    © ООО «Газосиликат Могилев», 2014-2022
-                </div>
-                <div class="bottom-footer__confidence">
-                    Политика обработки данных
-                </div>
-                <div class="bottom-footer__create create-footer">
-                    <div class="create-footer__text">
-                        Создание сайта:
+                    <div class="bottom-footer__wrapper">
+                    <div class="bottom-footer__copy">
+                        © ООО «Газосиликат Могилев», 2014-2022
                     </div>
-                    <div class="create-footer__logo">
-                        <img src="img/footer-promicom-logo.svg" alt="promicom-logo"
-                             class="create-footer__logo-image">
+                    <div class="bottom-footer__confidence">
+                        Политика обработки данных
+                    </div>
+                    <div class="bottom-footer__create create-footer">
+                        <div class="create-footer__text">
+                            Создание сайта:
+                        </div>
+                        <div class="create-footer__logo">
+                            <img src="img/footer-promicom-logo.svg" alt="promicom-logo"
+                                 class="create-footer__logo-image">
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 
+    <div class="page-navigation">
+        <a href="#header-page" class="page-navigation__link"></a>
+        <a href="#about-cmp" class="page-navigation__link"></a>
+        <a href="" class="page-navigation__link"></a>
+        <a href="" class="page-navigation__link"></a>
+        <a href="" class="page-navigation__link"></a>
+        <a href="" class="page-navigation__link"></a>
+        <a href="" class="page-navigation__link"></a>
+        <a href="#footer-page" class="page-navigation__link"></a>
+    </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
 <script src="js/app.min.js"></script>
 
 </body>
