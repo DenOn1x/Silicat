@@ -1,0 +1,76 @@
+.baloon {
+  display: flex;
+  align-items: flex-start;
+  margin: 24px;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+  }
+
+  &__title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    color: #000000;
+  }
+
+  &__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin: 12px 0 24px 0;
+    width: 340px;
+  }
+
+  &__wrapper-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 20px 12px 32px;
+    gap: 4px;
+    width: 187px;
+    height: 48px;
+    background: #FFFFFF;
+    border-radius: 28px;
+    cursor: pointer;
+  }
+
+  &__btn {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+    background: none;
+    border: none;
+  }
+
+
+}
+
+[class*="balloon__layout"] {
+  background: #FFBB33 !important;
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  width: 520px !important;
+}
+
+[class*="balloon__content"] {
+  background: #FFBB33 !important;
+  width: auto !important;
+}
+
+[class*="balloon__tail"] {
+  display: none !important;
+}
+

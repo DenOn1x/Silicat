@@ -3,29 +3,17 @@
 
   .about-company {
     position: relative;
+    @media (min-width: 1200px) {
+      margin-bottom: 35px;
+    }
 
     .page-navigation {
-      display: none;
       @media (min-width: 768px) {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: -5%;
-        z-index: 9999;
-        transform: rotate(90deg);
-        &__link {
-          height: 25px;
-          width: 25px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
-
-          &:hover {
-            background: #FFBB33;
-          }
+        &__title {
+          color: #999999;
+          opacity: 1;
         }
       }
-
     }
 
     &__wrapper {
@@ -340,25 +328,15 @@
 
   .products-block {
     position: relative;
+    @media (min-width: 1200px) {
+      margin-bottom: 35px;
+    }
 
     .page-navigation {
-      display: none;
       @media (min-width: 768px) {
-        position: absolute;
-        top: 50%;
-        left: -5%;
-        z-index: 9999;
-        transform: rotate(90deg);
-        &__link {
-          height: 25px;
-          width: 25px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
-
-          &:hover {
-            background: #FFBB33;
-          }
+        &__title {
+          color: #999999;
+          opacity: 1;
         }
       }
     }
@@ -507,7 +485,7 @@
         z-index: 1;
         @media (min-width: 1200px) {
           bottom: 88%;
-          left: 4%;
+          left: -6%;
         }
       }
 
@@ -539,7 +517,7 @@
           left: 58%;
         }
         @media (min-width: 1200px) {
-          left: 40%;
+          left: 35%;
           top: 10%;
         }
       }
@@ -551,7 +529,7 @@
           left: 94%;
         }
         @media (min-width: 1200px) {
-          left: 57%;
+          left: 52%;
           top: 10%;
 
         }
@@ -709,7 +687,7 @@
             align-items: center;
           }
           @media (min-width: 1200px) {
-            margin: 0;
+            margin-bottom: 60px;
           }
         }
 
@@ -847,27 +825,16 @@
 
   .activity-block {
     position: relative;
-
+    @media (min-width: 1200px) {
+      margin-bottom: 35px;
+    }
     .page-navigation {
-      display: none;
       @media (min-width: 768px) {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: -5%;
-        z-index: 9999;
-        transform: rotate(90deg);
-
-        &__link {
-          height: 25px;
-          width: 25px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
+        &__title {
+          left: -1%;
         }
       }
     }
-
     &__wrapper {
       position: relative;
       z-index: 1;
@@ -1036,6 +1003,10 @@
         position: absolute;
         bottom: 3%;
         left: 26%;
+        @media(min-width: 1200px) {
+          bottom: -2%;
+          left: 48%;
+        }
 
         &__pulse {
           padding: 0 20px;
@@ -1069,6 +1040,10 @@
             display: block;
             width: 10px;
             height: 16px;
+          }
+
+          @media (min-width: 1200px) {
+            display: none;
           }
         }
 
@@ -1117,29 +1092,17 @@
   //wind-warm block start
   .wind-warm-block {
     position: relative;
-
-    .page-navigation {
-      display: none;
-      @media (min-width: 768px) {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: -5%;
-        z-index: 9999;
-        transform: rotate(90deg);
-        &__link {
-          height: 25px;
-          width: 25px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
-        }
-      }
+    @media (min-width: 1200px) {
+      margin-bottom: 35px;
     }
 
     &__wrapper {
       margin: 6px;
       height: 780px;
+      @media (min-width: 1200px) {
+        height: 872px;
+        margin: 16px;
+      }
     }
 
     &__body {
@@ -1322,7 +1285,7 @@
         justify-content: center;
         margin: 0 auto 60px;
         @media (min-width: 1200px) {
-          margin: 48px 0 80px 0;
+          margin: 48px 0 165px 0;
         }
 
         &__btn {
@@ -1401,7 +1364,7 @@
         position: absolute;
         top: 0;
         width: 99%;
-        height: 784px;
+        height: 870px;
         object-fit: cover;
         object-position: center;
         z-index: -999;
@@ -1414,23 +1377,13 @@
   //transport block start
   .transport-company-block {
     position: relative;
-
+    @media (min-width: 1200px) {
+      margin-bottom: 35px;
+    }
     .page-navigation {
-      display: none;
       @media (min-width: 768px) {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: -5%;
-        z-index: 9999;
-        transform: rotate(90deg);
-
-        &__link {
-          height: 25px;
-          width: 25px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
+        &__title {
+          left: -55px;
         }
       }
     }
@@ -1438,6 +1391,10 @@
     &__wrapper {
       margin: 6px;
       height: 780px;
+      @media (min-width: 1200px) {
+        height: 872px;
+        margin: 16px;
+      }
     }
 
     &__body {
@@ -1625,7 +1582,7 @@
       justify-content: center;
       margin: 0 auto 65px;
       @media (min-width: 1200px) {
-        margin: 48px 0 80px 0;
+        margin: 48px 0 165px 0;
       }
 
       &__btn {
@@ -1702,7 +1659,7 @@
         position: absolute;
         top: 0;
         width: 99%;
-        height: 784px;
+        height: 870px;
         object-fit: cover;
         object-position: center;
         z-index: -999;
@@ -1715,30 +1672,23 @@
   //medical block start
   .medical-center-block {
     position: relative;
-
+    @media (min-width: 1200px) {
+      margin-bottom: 30px;
+    }
     .page-navigation {
-      display: none;
       @media (min-width: 768px) {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: -5%;
-        z-index: 9999;
-        transform: rotate(90deg);
-
-        &__link {
-          height: 25px;
-          width: 25px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
+        &__title {
+          left: -65px;
         }
       }
     }
-
     &__wrapper {
       margin: 6px;
       height: 780px;
+      @media (min-width: 1200px) {
+        height: 872px;
+        margin: 16px;
+      }
     }
 
     &__body {
@@ -1913,7 +1863,7 @@
       justify-content: center;
       margin: 0 auto 110px;
       @media (min-width: 1200px) {
-        margin: 48px 0 0 0;
+        margin: 48px 0 145px 0;
       }
 
       &__btn {
@@ -1990,7 +1940,7 @@
         position: absolute;
         top: 0;
         width: 99%;
-        height: 784px;
+        height: 870px;
         object-fit: cover;
         object-position: center;
         z-index: -999;

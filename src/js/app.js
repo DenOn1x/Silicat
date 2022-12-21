@@ -1,6 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp();
+import { MaskInput } from "maska"
 
 
 let menuBtn = document.querySelector('.header__menu-btn');
@@ -23,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
         speed: 2000,
         fixedWidth: '70%',
         updateOnMove: true,
-        breakpoints:{
-            1200:{
+        breakpoints: {
+            1200: {
                 fixedWidth: '100%',
             }
         }
@@ -64,9 +65,20 @@ ymaps.ready(function () {
             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
         ),
         vetroparkWithContent = new ymaps.Placemark(coordVeropark, {
-            hintContent: 'Собственный значок метки с контентом',
-            balloonContent: 'А эта — новогодняя',
-            iconContent: '1'
+            hintContent: '',
+            iconContent: '1',
+            balloonContent: `
+            <div class="baloon">
+            <img src="img/map-images/vetropark-map.svg" alt="vetropark" class="baloon__image">
+            <div class="baloon__body">
+            <div class="baloon__title">Ветропарк в Дрибинском районе</div>
+            <div class="baloon__text">Нами освоен совершенно новый для нас инвестиционный проект «Строительство ветропарка в Дрибинском районе».</div>
+            <div class="baloon__wrapper-btn">
+            <butoon class="baloon__btn">подробнее</butoon>
+         </div>
+       </div>
+     </div>
+            `,
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
@@ -83,28 +95,28 @@ ymaps.ready(function () {
             // Макет содержимого.
             iconContentLayout: MyIconContentLayout
         }),
-    houseWithContent = new ymaps.Placemark(coordHouse, {
-        hintContent: 'Собственный значок метки с контентом',
-        balloonContent: 'А эта — новогодняя',
-        iconContent: '2'
-    }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#imageWithContent',
-        // Своё изображение иконки метки.
-        iconImageHref: 'img/map-images/house-map.svg',
-        // Размеры метки.
-        iconImageSize: [104, 104],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-24, -24],
-        // Смещение слоя с содержимым относительно слоя с картинкой.
-        iconContentOffset: [15, 15],
-        // Макет содержимого.
-        iconContentLayout: MyIconContentLayout
-    }),
-        hotelWithContent = new ymaps.Placemark(coordHotel, {
+        houseWithContent = new ymaps.Placemark(coordHouse, {
             hintContent: 'Собственный значок метки с контентом',
+            balloonContent: 'А эта — новогодняя',
+            iconContent: '2'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/map-images/house-map.svg',
+            // Размеры метки.
+            iconImageSize: [104, 104],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-24, -24],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [15, 15],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
+        }),
+        hotelWithContent = new ymaps.Placemark(coordHotel, {
+
             balloonContent: 'А эта — новогодняя',
             iconContent: '3'
         }, {
@@ -123,26 +135,26 @@ ymaps.ready(function () {
             // Макет содержимого.
             iconContentLayout: MyIconContentLayout
         }),
-    silicatWithContent = new ymaps.Placemark(coordSilicat, {
-        hintContent: 'Собственный значок метки с контентом',
-        balloonContent: 'А эта — новогодняя',
-        iconContent: '4'
-    }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#imageWithContent',
-        // Своё изображение иконки метки.
-        iconImageHref: 'img/map-images/silicat-map.svg',
-        // Размеры метки.
-        iconImageSize: [104, 104],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-24, -24],
-        // Смещение слоя с содержимым относительно слоя с картинкой.
-        iconContentOffset: [15, 15],
-        // Макет содержимого.
-        iconContentLayout: MyIconContentLayout
-    });
+        silicatWithContent = new ymaps.Placemark(coordSilicat, {
+            hintContent: 'Собственный значок метки с контентом',
+            balloonContent: 'А эта — новогодняя',
+            iconContent: '4'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/map-images/silicat-map.svg',
+            // Размеры метки.
+            iconImageSize: [104, 104],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-24, -24],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [15, 15],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
+        });
 
     myMap.geoObjects
         .add(vetroparkWithContent)
@@ -159,3 +171,10 @@ ymaps.ready(function () {
     myMap.controls.remove('rulerControl');
     myMap.behaviors.disable(['scrollZoom']);
 });
+
+new MaskInput("[data-maska]",{
+    mask: "###-##-###-##-##",
+    reversed: false,
+    onMaska: (detail) => console.log(detail.completed),
+    '#': { pattern: /[0-9]/ },
+})
