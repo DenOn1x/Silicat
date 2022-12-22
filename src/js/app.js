@@ -1,7 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp();
-import { MaskInput } from "maska"
+import {MaskInput} from "maska"
 
 
 let menuBtn = document.querySelector('.header__menu-btn');
@@ -172,9 +172,32 @@ ymaps.ready(function () {
     myMap.behaviors.disable(['scrollZoom']);
 });
 
-new MaskInput("[data-maska]",{
+new MaskInput("[data-maska]", {
     mask: "###-##-###-##-##",
     reversed: false,
     onMaska: (detail) => console.log(detail.completed),
-    '#': { pattern: /[0-9]/ },
+    '#': {pattern: /[0-9]/},
 })
+
+
+let modalContacts = document.getElementById("modal-contact");
+document.querySelectorAll(".btn-modal-get-contacts").forEach((item) => {
+    item.onclick = getClickContact;
+});
+let closeModalWindowContacts = document.querySelector(".block-modal__close");
+
+function getClickContact() {
+    modalContacts.style.display = "block";
+    document.body.style.overflow = 'hidden'
+}
+
+closeModalWindowContacts.onclick = function () {
+    modalContacts.style.display = "none";
+    document.body.style.overflow = 'visible'
+}
+window.onclick = function (event) {
+    if (event.target === modalContacts) {
+        modalContacts.style.display = "none";
+        document.body.style.overflow = 'visible'
+    }
+}

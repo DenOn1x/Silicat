@@ -2,13 +2,6 @@
   flex: 0 0 auto;
   position: relative;
 
-  .page-navigation {
-    @media (min-width: 768px) {
-      &__title {
-        top: 44%;
-      }
-    }
-  }
   &__menu {
     display: flex;
     flex-direction: row;
@@ -124,7 +117,7 @@
   .top-footer {
     &__body {
       padding: 0 20px;
-      @media (min-width: 1200px) {
+      @media (min-width: 576px) {
         padding: 0 60px;
       }
     }

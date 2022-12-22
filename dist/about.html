@@ -177,7 +177,7 @@
                             </div>
                         </div>
                         <div class="top-footer__button button-write">
-                            <button class="button-write__btn">
+                            <button class="button-write__btn btn-modal-get-contacts">
                                 написать нам
                             </button>
                         </div>
@@ -261,9 +261,54 @@
     <div class="page-navigation__title">
         Контакты
     </div>
-    <div class="footer-modal-mobile modal-footer">
-        <div class="modal-footer__wrapper">
 
+
+    <div id="modal-contact" class="modal-block block-modal">
+        <div class="block-modal__content">
+            <div class="block-modal__header">
+                <div class="block-modal__close">&times;</div>
+                <div class="block-modal__title">
+                    Напишите нам
+                </div>
+            </div>
+            <div class="block-modal__body">
+                <form action="/" method="post" class="block-modal__contacts-data" id="form-contacts-data">
+                    <div class="block-modal__input-wrapper">
+                        <label for="block-input-name" class="block-modal__for-name">Ваше имя</label>
+                        <input class="block-modal__input-name"
+                               id="block-input-name"
+                               type="text"
+                               autocapitalize="off"
+                               required
+                               placeholder="Введите имя"/>
+                    </div>
+                    <div class="block-modal__input-wrapper">
+                        <label for="block-input-number" class="block-modal__for-number">Мобильный телефон</label>
+                        <input class="block-modal__input-number"
+                               id="block-input-number"
+                               type="text"
+                               autocapitalize="off"
+                               required
+                               data-maska=""
+                               placeholder="+375 ( _ _ ) _ _ _ - _ _ - _ _"/>
+                    </div>
+
+                    <div class="block-modal__input-wrapper">
+                        <label for="block-input-message" class="block-modal__for-message">Сообщение</label>
+                        <textarea type="text" class="block-modal__input-message" id="block-input-message"
+                                  placeholder="Текст сообщения"></textarea>
+                    </div>
+                    <button class="block-modal__btn-get-contacts">Отправить</button>
+                    <div class="block-modal__text">
+                        Нажимая на кнопку «Отправить»,
+                        вы соглашаетесь на
+                        <span class="block-modal__text-decor">
+                        обработку своих данных
+                    </span>
+                    </div>
+                    <div class="block-modal__error" id="error"></div>
+                </form>
+            </div>
         </div>
     </div>
 
