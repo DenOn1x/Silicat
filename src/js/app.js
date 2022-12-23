@@ -64,37 +64,86 @@ ymaps.ready(function () {
         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
         ),
-        vetroparkWithContent = new ymaps.Placemark(coordVeropark, {
-            hintContent: '',
-            iconContent: '1',
-            balloonContent: `
-            <div class="baloon">
-            <img src="img/map-images/vetropark-map.svg" alt="vetropark" class="baloon__image">
-            <div class="baloon__body">
-            <div class="baloon__title">Ветропарк в Дрибинском районе</div>
-            <div class="baloon__text">Нами освоен совершенно новый для нас инвестиционный проект «Строительство ветропарка в Дрибинском районе».</div>
-            <div class="baloon__wrapper-btn">
-            <butoon class="baloon__btn">подробнее</butoon>
-         </div>
-       </div>
-     </div>
-            `,
+        //    vetroparkWithContent = new ymaps.Placemark(coordVeropark, {
+        //        hintContent: '',
+        //        iconContent: '1',
+        //        balloonContent: `
+        //        <div class="baloon">
+        //        <img src="img/map-images/vetropark-map.svg" alt="vetropark" class="baloon__image">
+        //        <div class="baloon__body">
+        //        <div class="baloon__title">Ветропарк в Дрибинском районе</div>
+        //        <div class="baloon__text">Нами освоен совершенно новый для нас инвестиционный проект «Строительство ветропарка в Дрибинском районе».</div>
+        //        <div class="baloon__wrapper-btn">
+        //        <butoon class="baloon__btn">подробнее</butoon>
+        //     </div>
+        //   </div>
+        // </div>
+        //        `,
+        //    }, {
+        //        // Опции.
+        //        // Необходимо указать данный тип макета.
+        //        iconLayout: 'default#imageWithContent',
+        //        // Своё изображение иконки метки.
+        //        iconImageHref: 'img/map-images/vetropark-map.svg',
+        //        // Размеры метки.
+        //        iconImageSize: [104, 104],
+        //        // Смещение левого верхнего угла иконки относительно
+        //        // её "ножки" (точки привязки).
+        //        iconImageOffset: [-24, -24],
+        //        // Смещение слоя с содержимым относительно слоя с картинкой.
+        //        iconContentOffset: [15, 15],
+        //        // Макет содержимого.
+        //        iconContentLayout: MyIconContentLayout
+        //    }),
+        BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+
+            '<div class="baloon">' +
+            '<img src="img/map-images/vetropark-map.svg" alt="vetropark" class="baloon__image">' +
+            '<div class="baloon__body">' +
+            '<div class="baloon__title">Ветропарк в Дрибинском районе</div>' +
+            '<div class="baloon__text">Нами освоен совершенно новый для нас инвестиционный проект «Строительство ветропарка в Дрибинском районе».</div>' +
+
+            '</div>' +
+            '</div>', {
+
+                // Переопределяем функцию build, чтобы при создании макета начинать
+                // слушать событие click на кнопке-счетчике.
+                build: function () {
+                    // Сначала вызываем метод build родительского класса.
+                    BalloonContentLayout.superclass.build.call(this);
+                    // А затем выполняем дополнительные действия.
+
+                },
+
+                // Аналогично переопределяем функцию clear, чтобы снять
+                // прослушивание клика при удалении макета с карты.
+                clear: function () {
+                    // Выполняем действия в обратном порядке - сначала снимаем слушателя,
+                    // а потом вызываем метод clear родительского класса.
+
+                },
+
+                onCounterClick: function () {
+
+                }
+            });
+
+    var placemark = new ymaps.Placemark(coordVeropark, {
+            name: '',
+            hasCloseButton: false,
+            maxWidth: 50,
+
         }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
             iconLayout: 'default#imageWithContent',
-            // Своё изображение иконки метки.
             iconImageHref: 'img/map-images/vetropark-map.svg',
-            // Размеры метки.
             iconImageSize: [104, 104],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
             iconImageOffset: [-24, -24],
-            // Смещение слоя с содержимым относительно слоя с картинкой.
             iconContentOffset: [15, 15],
-            // Макет содержимого.
-            iconContentLayout: MyIconContentLayout
+            draggable:false,
+
+            balloonContentLayout: BalloonContentLayout,
         }),
+
         houseWithContent = new ymaps.Placemark(coordHouse, {
             hintContent: 'Собственный значок метки с контентом',
             balloonContent: 'А эта — новогодняя',
@@ -157,7 +206,8 @@ ymaps.ready(function () {
         });
 
     myMap.geoObjects
-        .add(vetroparkWithContent)
+        // .add(vetroparkWithContent)
+        .add(placemark)
         .add(houseWithContent)
         .add(hotelWithContent)
         .add(silicatWithContent);
@@ -171,6 +221,7 @@ ymaps.ready(function () {
     myMap.controls.remove('rulerControl');
     myMap.behaviors.disable(['scrollZoom']);
 });
+
 
 new MaskInput("[data-maska]", {
     mask: "###-##-###-##-##",
@@ -201,3 +252,15 @@ window.onclick = function (event) {
         document.body.style.overflow = 'visible'
     }
 }
+
+let selector = '.page-navigation__link';
+
+$(selector).on('click', function(){
+    $(selector).removeClass('active');
+    $(this).addClass('active');
+});
+
+
+// $(".menu-btn-page").on("click", function() {
+//     $(".block-menu").toggle();
+// });
