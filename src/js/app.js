@@ -11,12 +11,20 @@ menuBtn.addEventListener('click', function () {
     menu.classList.toggle('active');
 })
 
-let menuBtnPage = document.querySelector('.menu-btn-page');
-let menuBlockPage = document.querySelector('.block-menu');
-menuBtnPage.addEventListener('click', function () {
-    menuBtnPage.classList.toggle('active');
-    menuBlockPage.classList.toggle('active');
-})
+const onclickButtonShowMore = (event) => {
+    let textForShowMore = event.currentTarget;
+    let nextEl = textForShowMore.parentElement;
+    let body = nextEl.parentElement;
+    body.querySelector('.block-menu').classList.toggle('active')
+    textForShowMore.classList.toggle('active');
+}
+
+const setOnClickBtnShowMore = (button) => {
+    button.addEventListener('click', onclickButtonShowMore, false);
+}
+
+document.querySelectorAll(".menu-btn-page").forEach(button => setOnClickBtnShowMore(button));
+
 
 document.addEventListener('DOMContentLoaded', function () {
     var splide = new Splide('.splide', {
@@ -38,12 +46,12 @@ document.addEventListener('DOMContentLoaded', function () {
 // let titleOfSlide = document.querySelectorAll('.blocks-slide__title')
 //     .forEach((item)=>{
 //         item.style.opacity = '0'
-//         let activeSlide = document.querySelectorAll('.splide__slide')
-//             .forEach((element)=>{
-//                 if(element.classList.contains('is-active')){
-//                     titleOfSlide[item].style.opacity = '1'
-//                 }
-//             })
+//     })
+// document.querySelectorAll('.splide__slide')
+//     .forEach((element)=>{
+//         if(element.classList.contains('is-active')){
+//             element.querySelector('.blocks-slide__title').style.opacity = '1'
+//         }
 //     })
 
 
@@ -253,14 +261,28 @@ window.onclick = function (event) {
     }
 }
 
-let selector = '.page-navigation__link';
 
-$(selector).on('click', function(){
-    $(selector).removeClass('active');
-    $(this).addClass('active');
+
+// let selector = '.page-navigation__link';
+// $(selector).on('click', function(){
+//     $(selector).removeClass('active');
+//     $(this).addClass('active');
+// });
+
+
+$(window).scroll(function(){
+    let $sections = $('section');
+    $sections.each(function(i,el){
+        let top  = $(el).offset().top-10;
+        let bottom = top +$(el).height();
+        let scroll = $(window).scrollTop();
+        let id = $(el).attr('id');
+        if( scroll > top && scroll < bottom){
+            $('a.active').removeClass('active');
+            $('a[href="#'+id+'"]').addClass('active');
+
+        }
+    })
 });
 
 
-// $(".menu-btn-page").on("click", function() {
-//     $(".block-menu").toggle();
-// });
